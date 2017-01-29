@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB4FCC491E3D3BC7009A886A"
+               BlueprintIdentifier = "AB4FCCCF1E3D817A009A886A"
                BuildableName = "projectignite2017.app"
                BlueprintName = "projectignite2017"
                ReferencedContainer = "container:projectignite2017.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB4FCC681E3D3BC8009A886A"
+               BlueprintIdentifier = "AB4FCCE81E3D817A009A886A"
                BuildableName = "projectignite2017Tests.xctest"
                BlueprintName = "projectignite2017Tests"
                ReferencedContainer = "container:projectignite2017.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB4FCC731E3D3BC8009A886A"
+               BlueprintIdentifier = "AB4FCCF31E3D817A009A886A"
                BuildableName = "projectignite2017UITests.xctest"
                BlueprintName = "projectignite2017UITests"
                ReferencedContainer = "container:projectignite2017.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB4FCC491E3D3BC7009A886A"
+            BlueprintIdentifier = "AB4FCCCF1E3D817A009A886A"
             BuildableName = "projectignite2017.app"
             BlueprintName = "projectignite2017"
             ReferencedContainer = "container:projectignite2017.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB4FCC491E3D3BC7009A886A"
+            BlueprintIdentifier = "AB4FCCCF1E3D817A009A886A"
             BuildableName = "projectignite2017.app"
             BlueprintName = "projectignite2017"
             ReferencedContainer = "container:projectignite2017.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB4FCC491E3D3BC7009A886A"
+            BlueprintIdentifier = "AB4FCCCF1E3D817A009A886A"
             BuildableName = "projectignite2017.app"
             BlueprintName = "projectignite2017"
             ReferencedContainer = "container:projectignite2017.xcodeproj">
