@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V3a-Go-wK4">
+                                <rect key="frame" x="0.0" y="28" width="375" height="490"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="7Ud-dI-cZk"/>
+                                    <constraint firstAttribute="height" constant="518" id="sdG-Fi-Zfb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElK-ug-8mn">
+                                <rect key="frame" x="120" y="601" width="135" height="38"/>
+                                <state key="normal" title="Select from Library ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosephoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Xk-LA-J5h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwh-n5-5ZL">
+                                <rect key="frame" x="154" y="545" width="67" height="50"/>
+                                <state key="normal" image="camera"/>
+                                <connections>
+                                    <action selector="capturephoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="szK-wb-EDj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12406923987196239" green="0.98543947525456543" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rwh-n5-5ZL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="138" id="07f-7I-iWR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V3a-Go-wK4" secondAttribute="bottom" constant="149" id="9F1-bB-HoP"/>
+                            <constraint firstItem="V3a-Go-wK4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E7A-8O-4pX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ElK-ug-8mn" secondAttribute="trailing" constant="104" id="L7q-q1-KMr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rwh-n5-5ZL" secondAttribute="trailing" constant="138" id="XlZ-r3-fb3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ElK-ug-8mn" secondAttribute="bottom" constant="28" id="akt-iv-ohF"/>
+                            <constraint firstItem="ElK-ug-8mn" firstAttribute="top" secondItem="rwh-n5-5ZL" secondAttribute="bottom" constant="6" id="cx3-Hu-eA3"/>
+                            <constraint firstItem="rwh-n5-5ZL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hJa-NE-BID"/>
+                            <constraint firstItem="ElK-ug-8mn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="104" id="qSk-iS-qDf"/>
+                            <constraint firstItem="ElK-ug-8mn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sdN-2m-vH6"/>
+                            <constraint firstItem="rwh-n5-5ZL" firstAttribute="top" secondItem="V3a-Go-wK4" secondAttribute="bottom" constant="27" id="zsl-xC-SlP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraImageView" destination="V3a-Go-wK4" id="GUf-y4-Pk3"/>
+                        <outletCollection property="camera" destination="V3a-Go-wK4" id="4gb-WX-STO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="50" height="50"/>
+    </resources>
+    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+</document>
