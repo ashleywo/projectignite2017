@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-Eq-BpL">
+                                <rect key="frame" x="120" y="610" width="134" height="30"/>
+                                <state key="normal" title="Select From Library">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiP-BE-HwC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEU-6g-tTY">
+                                <rect key="frame" x="164" y="560" width="46" height="50"/>
+                                <state key="normal" title="Button" image="camera"/>
+                                <connections>
+                                    <action selector="capturePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UhZ-x8-1CH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dma-sZ-I9x">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="534"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="534" id="jPJ-oK-soR"/>
+                                    <constraint firstAttribute="width" constant="375" id="xcW-m7-NQM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cT9-Eq-BpL" firstAttribute="top" secondItem="HEU-6g-tTY" secondAttribute="bottom" id="03a-Pc-vgO"/>
+                            <constraint firstItem="HEU-6g-tTY" firstAttribute="top" secondItem="dma-sZ-I9x" secondAttribute="bottom" constant="26" id="D9C-x8-wle"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dma-sZ-I9x" secondAttribute="bottom" constant="133" id="FDx-W0-s6m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HEU-6g-tTY" secondAttribute="trailing" constant="149" id="Itb-2e-eke"/>
+                            <constraint firstItem="HEU-6g-tTY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="148" id="QyL-jr-8fF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cT9-Eq-BpL" secondAttribute="bottom" constant="27" id="YaM-BS-cR5"/>
+                            <constraint firstItem="dma-sZ-I9x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="auE-ka-4eV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cT9-Eq-BpL" secondAttribute="trailing" constant="105" id="b3W-n6-66x"/>
+                            <constraint firstItem="HEU-6g-tTY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nw2-Rw-qE6"/>
+                            <constraint firstItem="cT9-Eq-BpL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="104" id="ogs-9F-nNE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ChoosePhoto" destination="cT9-Eq-BpL" id="Ilq-oy-Dtr"/>
+                        <outlet property="ImageView" destination="dma-sZ-I9x" id="FgG-eb-X4B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="50" height="50"/>
+    </resources>
+</document>

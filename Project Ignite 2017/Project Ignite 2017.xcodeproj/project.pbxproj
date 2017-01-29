@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33320C1E1E3E75970018430D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33320C1D1E3E75970018430D /* main.m */; };
+		33320C211E3E75970018430D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33320C201E3E75970018430D /* AppDelegate.m */; };
+		33320C241E3E75970018430D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33320C231E3E75970018430D /* ViewController.m */; };
+		33320C271E3E75970018430D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33320C251E3E75970018430D /* Main.storyboard */; };
+		33320C291E3E75970018430D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33320C281E3E75970018430D /* Assets.xcassets */; };
+		33320C2C1E3E75970018430D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33320C2A1E3E75970018430D /* LaunchScreen.storyboard */; };
+		33320C371E3E75970018430D /* Project_Ignite_2017Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33320C361E3E75970018430D /* Project_Ignite_2017Tests.m */; };
+		33320C421E3E75970018430D /* Project_Ignite_2017UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33320C411E3E75970018430D /* Project_Ignite_2017UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33320C331E3E75970018430D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33320C111E3E75960018430D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33320C181E3E75960018430D;
+			remoteInfo = "Project Ignite 2017";
+		};
+		33320C3E1E3E75970018430D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33320C111E3E75960018430D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33320C181E3E75960018430D;
+			remoteInfo = "Project Ignite 2017";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		33320C191E3E75970018430D /* Project Ignite 2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Ignite 2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33320C1D1E3E75970018430D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33320C1F1E3E75970018430D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		33320C201E3E75970018430D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		33320C221E3E75970018430D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		33320C231E3E75970018430D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		33320C261E3E75970018430D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33320C281E3E75970018430D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33320C2B1E3E75970018430D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		33320C2D1E3E75970018430D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33320C321E3E75970018430D /* Project Ignite 2017Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project Ignite 2017Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33320C361E3E75970018430D /* Project_Ignite_2017Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_Ignite_2017Tests.m; sourceTree = "<group>"; };
+		33320C381E3E75970018430D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33320C3D1E3E75970018430D /* Project Ignite 2017UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project Ignite 2017UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33320C411E3E75970018430D /* Project_Ignite_2017UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_Ignite_2017UITests.m; sourceTree = "<group>"; };
+		33320C431E3E75970018430D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33320C161E3E75960018430D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33320C2F1E3E75970018430D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33320C3A1E3E75970018430D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33320C101E3E75960018430D = {
+			isa = PBXGroup;
+			children = (
+				33320C1B1E3E75970018430D /* Project Ignite 2017 */,
+				33320C351E3E75970018430D /* Project Ignite 2017Tests */,
+				33320C401E3E75970018430D /* Project Ignite 2017UITests */,
+				33320C1A1E3E75970018430D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		33320C1A1E3E75970018430D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33320C191E3E75970018430D /* Project Ignite 2017.app */,
+				33320C321E3E75970018430D /* Project Ignite 2017Tests.xctest */,
+				33320C3D1E3E75970018430D /* Project Ignite 2017UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33320C1B1E3E75970018430D /* Project Ignite 2017 */ = {
+			isa = PBXGroup;
+			children = (
+				33320C1F1E3E75970018430D /* AppDelegate.h */,
+				33320C201E3E75970018430D /* AppDelegate.m */,
+				33320C221E3E75970018430D /* ViewController.h */,
+				33320C231E3E75970018430D /* ViewController.m */,
+				33320C251E3E75970018430D /* Main.storyboard */,
+				33320C281E3E75970018430D /* Assets.xcassets */,
+				33320C2A1E3E75970018430D /* LaunchScreen.storyboard */,
+				33320C2D1E3E75970018430D /* Info.plist */,
+				33320C1C1E3E75970018430D /* Supporting Files */,
+			);
+			path = "Project Ignite 2017";
+			sourceTree = "<group>";
+		};
+		33320C1C1E3E75970018430D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33320C1D1E3E75970018430D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33320C351E3E75970018430D /* Project Ignite 2017Tests */ = {
+			isa = PBXGroup;
+			children = (
+				33320C361E3E75970018430D /* Project_Ignite_2017Tests.m */,
+				33320C381E3E75970018430D /* Info.plist */,
+			);
+			path = "Project Ignite 2017Tests";
+			sourceTree = "<group>";
+		};
+		33320C401E3E75970018430D /* Project Ignite 2017UITests */ = {
+			isa = PBXGroup;
+			children = (
+				33320C411E3E75970018430D /* Project_Ignite_2017UITests.m */,
+				33320C431E3E75970018430D /* Info.plist */,
+			);
+			path = "Project Ignite 2017UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33320C181E3E75960018430D /* Project Ignite 2017 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33320C461E3E75970018430D /* Build configuration list for PBXNativeTarget "Project Ignite 2017" */;
+			buildPhases = (
+				33320C151E3E75960018430D /* Sources */,
+				33320C161E3E75960018430D /* Frameworks */,
+				33320C171E3E75960018430D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Project Ignite 2017";
+			productName = "Project Ignite 2017";
+			productReference = 33320C191E3E75970018430D /* Project Ignite 2017.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33320C311E3E75970018430D /* Project Ignite 2017Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33320C491E3E75970018430D /* Build configuration list for PBXNativeTarget "Project Ignite 2017Tests" */;
+			buildPhases = (
+				33320C2E1E3E75970018430D /* Sources */,
+				33320C2F1E3E75970018430D /* Frameworks */,
+				33320C301E3E75970018430D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33320C341E3E75970018430D /* PBXTargetDependency */,
+			);
+			name = "Project Ignite 2017Tests";
+			productName = "Project Ignite 2017Tests";
+			productReference = 33320C321E3E75970018430D /* Project Ignite 2017Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		33320C3C1E3E75970018430D /* Project Ignite 2017UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33320C4C1E3E75970018430D /* Build configuration list for PBXNativeTarget "Project Ignite 2017UITests" */;
+			buildPhases = (
+				33320C391E3E75970018430D /* Sources */,
+				33320C3A1E3E75970018430D /* Frameworks */,
+				33320C3B1E3E75970018430D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33320C3F1E3E75970018430D /* PBXTargetDependency */,
+			);
+			name = "Project Ignite 2017UITests";
+			productName = "Project Ignite 2017UITests";
+			productReference = 33320C3D1E3E75970018430D /* Project Ignite 2017UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33320C111E3E75960018430D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Project Ignite";
+				TargetAttributes = {
+					33320C181E3E75960018430D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8LHVWURD22;
+						ProvisioningStyle = Automatic;
+					};
+					33320C311E3E75970018430D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8LHVWURD22;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 33320C181E3E75960018430D;
+					};
+					33320C3C1E3E75970018430D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8LHVWURD22;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 33320C181E3E75960018430D;
+					};
+				};
+			};
+			buildConfigurationList = 33320C141E3E75960018430D /* Build configuration list for PBXProject "Project Ignite 2017" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33320C101E3E75960018430D;
+			productRefGroup = 33320C1A1E3E75970018430D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33320C181E3E75960018430D /* Project Ignite 2017 */,
+				33320C311E3E75970018430D /* Project Ignite 2017Tests */,
+				33320C3C1E3E75970018430D /* Project Ignite 2017UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33320C171E3E75960018430D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33320C2C1E3E75970018430D /* LaunchScreen.storyboard in Resources */,
+				33320C291E3E75970018430D /* Assets.xcassets in Resources */,
+				33320C271E3E75970018430D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33320C301E3E75970018430D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33320C3B1E3E75970018430D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33320C151E3E75960018430D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33320C241E3E75970018430D /* ViewController.m in Sources */,
+				33320C211E3E75970018430D /* AppDelegate.m in Sources */,
+				33320C1E1E3E75970018430D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33320C2E1E3E75970018430D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33320C371E3E75970018430D /* Project_Ignite_2017Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33320C391E3E75970018430D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33320C421E3E75970018430D /* Project_Ignite_2017UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33320C341E3E75970018430D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33320C181E3E75960018430D /* Project Ignite 2017 */;
+			targetProxy = 33320C331E3E75970018430D /* PBXContainerItemProxy */;
+		};
+		33320C3F1E3E75970018430D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33320C181E3E75960018430D /* Project Ignite 2017 */;
+			targetProxy = 33320C3E1E3E75970018430D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		33320C251E3E75970018430D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33320C261E3E75970018430D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		33320C2A1E3E75970018430D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33320C2B1E3E75970018430D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33320C441E3E75970018430D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		33320C451E3E75970018430D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33320C471E3E75970018430D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8LHVWURD22;
+				INFOPLIST_FILE = "Project Ignite 2017/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignite.Project-Ignite-2017";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		33320C481E3E75970018430D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8LHVWURD22;
+				INFOPLIST_FILE = "Project Ignite 2017/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignite.Project-Ignite-2017";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		33320C4A1E3E75970018430D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8LHVWURD22;
+				INFOPLIST_FILE = "Project Ignite 2017Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignite.Project-Ignite-2017Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Project Ignite 2017.app/Project Ignite 2017";
+			};
+			name = Debug;
+		};
+		33320C4B1E3E75970018430D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8LHVWURD22;
+				INFOPLIST_FILE = "Project Ignite 2017Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignite.Project-Ignite-2017Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Project Ignite 2017.app/Project Ignite 2017";
+			};
+			name = Release;
+		};
+		33320C4D1E3E75970018430D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 8LHVWURD22;
+				INFOPLIST_FILE = "Project Ignite 2017UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignite.Project-Ignite-2017UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Project Ignite 2017";
+			};
+			name = Debug;
+		};
+		33320C4E1E3E75970018430D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 8LHVWURD22;
+				INFOPLIST_FILE = "Project Ignite 2017UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignite.Project-Ignite-2017UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Project Ignite 2017";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33320C141E3E75960018430D /* Build configuration list for PBXProject "Project Ignite 2017" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33320C441E3E75970018430D /* Debug */,
+				33320C451E3E75970018430D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33320C461E3E75970018430D /* Build configuration list for PBXNativeTarget "Project Ignite 2017" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33320C471E3E75970018430D /* Debug */,
+				33320C481E3E75970018430D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		33320C491E3E75970018430D /* Build configuration list for PBXNativeTarget "Project Ignite 2017Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33320C4A1E3E75970018430D /* Debug */,
+				33320C4B1E3E75970018430D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		33320C4C1E3E75970018430D /* Build configuration list for PBXNativeTarget "Project Ignite 2017UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33320C4D1E3E75970018430D /* Debug */,
+				33320C4E1E3E75970018430D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33320C111E3E75960018430D /* Project object */;
+}
