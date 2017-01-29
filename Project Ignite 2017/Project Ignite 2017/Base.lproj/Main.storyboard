@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dr6-2u-zt7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="496"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="4VT-Rv-6o8"/>
+                                    <constraint firstAttribute="height" constant="496" id="LPC-hO-UKE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNa-dz-bW9">
+                                <rect key="frame" x="159" y="532" width="56" height="52"/>
+                                <state key="normal" title="Button" image="camera"/>
+                                <connections>
+                                    <action selector="capturePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="66d-y4-fe3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld0-TV-moK">
+                                <rect key="frame" x="120" y="592" width="134" height="30"/>
+                                <state key="normal" title="Select from Library"/>
+                                <connections>
+                                    <action selector="choosePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WbK-iO-HUI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ld0-TV-moK" secondAttribute="bottom" constant="45" id="23d-Nf-fgV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HNa-dz-bW9" secondAttribute="trailing" constant="144" id="6J3-Xz-p2c"/>
+                            <constraint firstItem="HNa-dz-bW9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="143" id="FjJ-d8-04K"/>
+                            <constraint firstItem="Ld0-TV-moK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gd0-oX-uVW"/>
+                            <constraint firstItem="HNa-dz-bW9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HLr-Gm-1GI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ld0-TV-moK" secondAttribute="trailing" constant="105" id="J3r-z6-zrX"/>
+                            <constraint firstItem="HNa-dz-bW9" firstAttribute="top" secondItem="dr6-2u-zt7" secondAttribute="bottom" constant="36" id="JSf-yY-hRX"/>
+                            <constraint firstItem="Ld0-TV-moK" firstAttribute="top" secondItem="HNa-dz-bW9" secondAttribute="bottom" constant="8" id="UFk-1v-1Xu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dr6-2u-zt7" secondAttribute="bottom" constant="171" id="dxk-Jg-6gW"/>
+                            <constraint firstItem="dr6-2u-zt7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lK2-HG-fXo"/>
+                            <constraint firstItem="Ld0-TV-moK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="104" id="mll-FU-sXv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraImageView" destination="dr6-2u-zt7" id="D9h-JF-LtC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="52" height="52"/>
+    </resources>
+</document>
