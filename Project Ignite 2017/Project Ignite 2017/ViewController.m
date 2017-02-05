@@ -20,21 +20,53 @@
     
     if (![UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
         
-        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"<#(nullable NSString *)#> message:@"Device has no camera" <#(nullable NSString *)#> delegate:<#(nullable id)#> cancelButtonTitle:@"Okay"<#(nullable NSString *)#> otherButtonTitles:<#(nullable NSString *), ...#>, nil]
-        
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                            message:@"Device has no camera"
+                                            delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles: nil];
         [myAlertView show];
+    }
+
 }
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-    - [(IBAction)capturePhoto: (UIButton *)sender {
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init]; picker.delegate = self; picker.allowsEditing = YES; picker.sourceType = UIImagePickerControllerSourceTypeCamera
-    }
+- (IBAction)capturePhoto: (UIButton*)sender {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+       
+- (IBAction)choosePhoto: (UIButton *)sender {
+           UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+           picker.delegate = self;
+           picker.allowsEditing = YES;
+           picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+           
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+       
+#pragma mark - Image Picker Controller delegate methods
+       
+- (void)imagePickerController:(UIImagePickerController *)picker   didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.ImageView.image = chosenImage;
     
-    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+       
+- (void)imagePickerControllerDidCancel: (UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
+
+
+
 @end

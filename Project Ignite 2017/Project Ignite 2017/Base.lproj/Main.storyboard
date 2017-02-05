@@ -22,18 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-Eq-BpL">
-                                <rect key="frame" x="120" y="610" width="134" height="30"/>
-                                <state key="normal" title="Select From Library">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="choosePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiP-BE-HwC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEU-6g-tTY">
-                                <rect key="frame" x="164" y="560" width="46" height="50"/>
-                                <state key="normal" title="Button" image="camera"/>
+                                <rect key="frame" x="123" y="552" width="129" height="50"/>
+                                <state key="normal" image="camera"/>
                                 <connections>
                                     <action selector="capturePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UhZ-x8-1CH"/>
                                 </connections>
@@ -45,23 +36,31 @@
                                     <constraint firstAttribute="width" constant="375" id="xcW-m7-NQM"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-Eq-BpL">
+                                <rect key="frame" x="92" y="610" width="191" height="30"/>
+                                <state key="normal" title="Select From Library">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiP-BE-HwC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cT9-Eq-BpL" firstAttribute="top" secondItem="HEU-6g-tTY" secondAttribute="bottom" id="03a-Pc-vgO"/>
-                            <constraint firstItem="HEU-6g-tTY" firstAttribute="top" secondItem="dma-sZ-I9x" secondAttribute="bottom" constant="26" id="D9C-x8-wle"/>
+                            <constraint firstItem="cT9-Eq-BpL" firstAttribute="top" secondItem="HEU-6g-tTY" secondAttribute="bottom" constant="8" id="03a-Pc-vgO"/>
+                            <constraint firstItem="HEU-6g-tTY" firstAttribute="top" secondItem="dma-sZ-I9x" secondAttribute="bottom" constant="18" id="D9C-x8-wle"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dma-sZ-I9x" secondAttribute="bottom" constant="133" id="FDx-W0-s6m"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HEU-6g-tTY" secondAttribute="trailing" constant="149" id="Itb-2e-eke"/>
-                            <constraint firstItem="HEU-6g-tTY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="148" id="QyL-jr-8fF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HEU-6g-tTY" secondAttribute="trailing" constant="107" id="YI0-uB-acg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cT9-Eq-BpL" secondAttribute="bottom" constant="27" id="YaM-BS-cR5"/>
                             <constraint firstItem="dma-sZ-I9x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="auE-ka-4eV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cT9-Eq-BpL" secondAttribute="trailing" constant="105" id="b3W-n6-66x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cT9-Eq-BpL" secondAttribute="trailing" constant="76" id="b3W-n6-66x"/>
                             <constraint firstItem="HEU-6g-tTY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nw2-Rw-qE6"/>
-                            <constraint firstItem="cT9-Eq-BpL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="104" id="ogs-9F-nNE"/>
+                            <constraint firstItem="cT9-Eq-BpL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="76" id="ogs-9F-nNE"/>
+                            <constraint firstItem="HEU-6g-tTY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="107" id="veX-nA-0gX"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ChoosePhoto" destination="cT9-Eq-BpL" id="Ilq-oy-Dtr"/>
                         <outlet property="ImageView" destination="dma-sZ-I9x" id="FgG-eb-X4B"/>
                     </connections>
                 </viewController>

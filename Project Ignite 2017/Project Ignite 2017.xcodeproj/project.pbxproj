@@ -429,7 +429,7 @@
 				INFOPLIST_FILE = "Project Ignite 2017/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignite.Project-Ignite-2017";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignitehpohl.Project-Ignite-2017";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -442,7 +442,7 @@
 				INFOPLIST_FILE = "Project Ignite 2017/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignite.Project-Ignite-2017";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignitehpohl.Project-Ignite-2017";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -516,6 +516,7 @@
 				33320C481E3E75970018430D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33320C491E3E75970018430D /* Build configuration list for PBXNativeTarget "Project Ignite 2017Tests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +525,7 @@
 				33320C4B1E3E75970018430D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33320C4C1E3E75970018430D /* Build configuration list for PBXNativeTarget "Project Ignite 2017UITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +534,7 @@
 				33320C4E1E3E75970018430D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
