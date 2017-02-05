@@ -207,7 +207,7 @@
 				TargetAttributes = {
 					1FDC65371E3E7A8900535C0F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = HHA3KZ2Y22;
+						DevelopmentTeam = 7FLHJY3QQE;
 						ProvisioningStyle = Automatic;
 					};
 					1FDC65501E3E7A8B00535C0F = {
@@ -425,11 +425,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HHA3KZ2Y22;
+				DEVELOPMENT_TEAM = 7FLHJY3QQE;
 				INFOPLIST_FILE = "Project Ignite 2017/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignite.Project-Ignite-2017";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignitesadavi.Project-Ignite-2017";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -439,11 +439,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HHA3KZ2Y22;
+				DEVELOPMENT_TEAM = 7FLHJY3QQE;
 				INFOPLIST_FILE = "Project Ignite 2017/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignite.Project-Ignite-2017";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignitesadavi.Project-Ignite-2017";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -518,6 +518,7 @@
 				1FDC65671E3E7A8B00535C0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FDC65681E3E7A8B00535C0F /* Build configuration list for PBXNativeTarget "Project Ignite 2017Tests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +527,7 @@
 				1FDC656A1E3E7A8B00535C0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FDC656B1E3E7A8B00535C0F /* Build configuration list for PBXNativeTarget "Project Ignite 2017UITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +536,7 @@
 				1FDC656D1E3E7A8B00535C0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

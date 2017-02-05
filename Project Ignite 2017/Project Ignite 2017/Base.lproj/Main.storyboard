@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-pe-nkV">
-                                <rect key="frame" x="120.5" y="647" width="134" height="0.0"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-pe-nkV">
+                                <rect key="frame" x="126" y="643" width="134" height="-36"/>
                                 <state key="normal" title="Select From Library">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -30,35 +30,34 @@
                                     <action selector="ChoosePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCJ-SE-JwN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4F-d9-bcS">
-                                <rect key="frame" x="162" y="571" width="50" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="Camera"/>
-                                <connections>
-                                    <action selector="CapturePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fns-c9-U04"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sw1-RW-JdB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sw1-RW-JdB">
                                 <rect key="frame" x="-19" y="11" width="394" height="535"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="535" id="c3h-1g-TRz"/>
                                     <constraint firstAttribute="width" constant="394" id="wYH-jB-OV1"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4F-d9-bcS">
+                                <rect key="frame" x="162" y="554" width="50" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="Camera"/>
+                                <connections>
+                                    <action selector="CapturePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fns-c9-U04"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="D4F-d9-bcS" firstAttribute="top" secondItem="Sw1-RW-JdB" secondAttribute="bottom" constant="25" id="0Xj-6Z-iEM"/>
+                            <constraint firstItem="D4F-d9-bcS" firstAttribute="top" secondItem="Sw1-RW-JdB" secondAttribute="bottom" constant="8" id="0Xj-6Z-iEM"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sw1-RW-JdB" secondAttribute="bottom" constant="121" id="Gef-g3-WKm"/>
-                            <constraint firstItem="Sw1-RW-JdB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gzh-gv-XqV"/>
-                            <constraint firstItem="DE5-pe-nkV" firstAttribute="top" secondItem="D4F-d9-bcS" secondAttribute="bottom" constant="32" id="IUQ-6O-A44"/>
+                            <constraint firstItem="Sw1-RW-JdB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-9.5" id="Gzh-gv-XqV"/>
+                            <constraint firstItem="DE5-pe-nkV" firstAttribute="top" secondItem="D4F-d9-bcS" secondAttribute="bottom" constant="39" id="IUQ-6O-A44"/>
                             <constraint firstItem="DE5-pe-nkV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kjj-GS-Wlx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DE5-pe-nkV" secondAttribute="bottom" constant="20" id="UOm-ag-bdp"/>
                             <constraint firstItem="D4F-d9-bcS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZkI-vD-fOb"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="CapturePhoto" destination="D4F-d9-bcS" id="STB-wP-9jK"/>
                         <outlet property="ImageView" destination="Sw1-RW-JdB" id="30z-YU-fNY"/>
                     </connections>
                 </viewController>
