@@ -426,7 +426,7 @@
 				DEVELOPMENT_TEAM = TGL8W5L9SM;
 				INFOPLIST_FILE = "Project Ignite 2017/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignite.Project-Ignite-2017";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignitebthomas.Project-Ignite-2017";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -438,7 +438,7 @@
 				DEVELOPMENT_TEAM = TGL8W5L9SM;
 				INFOPLIST_FILE = "Project Ignite 2017/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignite.Project-Ignite-2017";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignitebthomas.Project-Ignite-2017";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -508,6 +508,7 @@
 				C08E31A91E3E762F006B1A85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C08E31AA1E3E762F006B1A85 /* Build configuration list for PBXNativeTarget "Project Ignite 2017Tests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +517,7 @@
 				C08E31AC1E3E762F006B1A85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C08E31AD1E3E762F006B1A85 /* Build configuration list for PBXNativeTarget "Project Ignite 2017UITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +526,7 @@
 				C08E31AF1E3E762F006B1A85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
