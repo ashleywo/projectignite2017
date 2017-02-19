@@ -15,6 +15,7 @@
 		1FDC654B1E3E7A8A00535C0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDC65491E3E7A8A00535C0F /* LaunchScreen.storyboard */; };
 		1FDC65561E3E7A8B00535C0F /* Project_Ignite_2017Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC65551E3E7A8B00535C0F /* Project_Ignite_2017Tests.m */; };
 		1FDC65611E3E7A8B00535C0F /* Project_Ignite_2017UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDC65601E3E7A8B00535C0F /* Project_Ignite_2017UITests.m */; };
+		256B0D131E5A1D340092B0B9 /* FiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256B0D121E5A1D340092B0B9 /* FiltersViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		1FDC655C1E3E7A8B00535C0F /* Project Ignite 2017UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project Ignite 2017UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDC65601E3E7A8B00535C0F /* Project_Ignite_2017UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_Ignite_2017UITests.m; sourceTree = "<group>"; };
 		1FDC65621E3E7A8B00535C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		256B0D111E5A1D250092B0B9 /* FiltersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FiltersViewController.h; sourceTree = "<group>"; };
+		256B0D121E5A1D340092B0B9 /* FiltersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltersViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				1FDC65411E3E7A8A00535C0F /* ViewController.h */,
 				1FDC65421E3E7A8A00535C0F /* ViewController.m */,
 				1FDC65441E3E7A8A00535C0F /* Main.storyboard */,
+				256B0D121E5A1D340092B0B9 /* FiltersViewController.m */,
+				256B0D111E5A1D250092B0B9 /* FiltersViewController.h */,
 				1FDC65471E3E7A8A00535C0F /* Assets.xcassets */,
 				1FDC65491E3E7A8A00535C0F /* LaunchScreen.storyboard */,
 				1FDC654C1E3E7A8A00535C0F /* Info.plist */,
@@ -278,6 +283,7 @@
 			files = (
 				1FDC65431E3E7A8A00535C0F /* ViewController.m in Sources */,
 				1FDC65401E3E7A8A00535C0F /* AppDelegate.m in Sources */,
+				256B0D131E5A1D340092B0B9 /* FiltersViewController.m in Sources */,
 				1FDC653D1E3E7A8A00535C0F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

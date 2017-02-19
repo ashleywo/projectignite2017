@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FiltersViewController.h"
 
 @interface ViewController ()
 
@@ -40,7 +41,6 @@
 - (IBAction)CapturePhoto:(UIButton *)sender {
     UIImagePickerController *picker =[[UIImagePickerController alloc] init];
     picker.delegate = self;
-    picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     
     [self presentViewController:picker animated:YES completion:NULL];
@@ -50,7 +50,6 @@
     NSLog(@"clicked choose photo");
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
-    picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     [self presentViewController:picker animated:YES completion:NULL];
@@ -59,7 +58,7 @@
 #pragma mark - Image Picker Controller delegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    UIImage *chosenImage = info[UIImagePickerControllerOriginalImage];
     self.ImageView.image = chosenImage;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
@@ -70,14 +69,16 @@
     
 }
 
+//- (void)prepareForSegue: (UIStoryboardSegue *)segue sender:(id)sender
+    //{
+        //if ([[segue identifier] isEqualToString:@"filter"])
+        //{
+            //FiltersViewController *vc = [segue destinationViewController];
+            //[vc setImageView:self.ImageView];
+        //}
+    
+    //}
      
-    
-    
 
-
-
-
-
-    
-
-@end
+    @end
+ 
