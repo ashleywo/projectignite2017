@@ -31,6 +31,11 @@
         [myAlertView show];
     }
     self.filterSlider.hidden = YES;
+    if (self.image != nil)
+    {
+        self.selectedImageView.image = self.image;
+        originalImage = self.image;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -118,15 +123,27 @@
             break;
         case 1:
             selectedFilter = [[GPUImageSepiaFilter alloc] init];
-            self.filterSlider.hidden = YES;
+            self.filterSlider.hidden = NO;
+            
+            [self.filterSlider setValue:1.0];
+            [self.filterSlider setMinimumValue:0.0];
+            [self.filterSlider setMaximumValue:1.0];
             break;
         case 2:
             selectedFilter = [[GPUImageSketchFilter alloc] init];
-            self.filterSlider.hidden = YES;
+            self.filterSlider.hidden = NO;
+            
+            [self.filterSlider setMinimumValue:0.0];
+            [self.filterSlider setMaximumValue:1.0];
+            [self.filterSlider setValue:0.25];
             break;
         case 3:
             selectedFilter = [[GPUImagePixellateFilter alloc] init];
-            self.filterSlider.hidden = YES;
+            self.filterSlider.hidden = NO;
+            
+            [self.filterSlider setValue:0.05];
+            [self.filterSlider setMinimumValue:0.0];
+            [self.filterSlider setMaximumValue:0.3];
             break;
         case 4:
             selectedFilter = [[GPUImageColorInvertFilter alloc] init];

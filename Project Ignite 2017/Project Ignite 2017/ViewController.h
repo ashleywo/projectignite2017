@@ -21,6 +21,7 @@
 - (IBAction)openLibrary;
 - (IBAction)savePhoto:(id)sender;
 - (IBAction)pressedBack:(id)sender;
+- (IBAction)pressedEdit:(id)sender;
 
 
 @end

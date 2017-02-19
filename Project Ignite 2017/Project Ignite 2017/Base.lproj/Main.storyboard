@@ -122,9 +122,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
-                                    <segue destination="xr9-PU-6NV" kind="presentation" id="yOx-kA-Bam"/>
+                                    <segue destination="xr9-PU-6NV" kind="presentation" identifier="filterSegue" id="yOx-kA-Bam"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <action selector="pressedEdit:" destination="BYZ-38-t0r" id="u9a-Bo-j23"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -142,7 +145,7 @@
         <!--Edit Photo-->
         <scene sceneID="GrC-fH-UDZ">
             <objects>
-                <viewController id="Mee-pU-SYU" customClass="testViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="filter" id="Mee-pU-SYU" customClass="testViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uJ0-Qj-AgR"/>
                         <viewControllerLayoutGuide type="bottom" id="cGk-ZD-K1q"/>

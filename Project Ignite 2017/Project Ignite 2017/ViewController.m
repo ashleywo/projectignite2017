@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "testViewController.h"
 
 @interface ViewController ()
 {
@@ -87,16 +88,30 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)pressedEdit:(id)sender {
+    [self performSegueWithIdentifier:@"filterSegue" sender:self];
+}
+
 #pragma mark - Image Picker Controller delegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     self.saveButton.enabled = YES;
-    NSLog(@"hi");
+
     originalImage = [info valueForKey:UIImagePickerControllerOriginalImage];
     
     [self.selectImageView setImage:originalImage];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"filterSegue"])
+    {
+        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        testViewController *vc = (testViewController *)navController.topViewController;
+        [vc setImage:originalImage];
+    }
 }
 
 @end
