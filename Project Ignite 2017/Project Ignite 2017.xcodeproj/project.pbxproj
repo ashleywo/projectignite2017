@@ -15,6 +15,7 @@
 		33320C2C1E3E75970018430D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33320C2A1E3E75970018430D /* LaunchScreen.storyboard */; };
 		33320C371E3E75970018430D /* Project_Ignite_2017Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33320C361E3E75970018430D /* Project_Ignite_2017Tests.m */; };
 		33320C421E3E75970018430D /* Project_Ignite_2017UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33320C411E3E75970018430D /* Project_Ignite_2017UITests.m */; };
+		33B2DA0C1E5A1C1600A568F8 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B2DA0B1E5A1C1600A568F8 /* EditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		33320C3D1E3E75970018430D /* Project Ignite 2017UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project Ignite 2017UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33320C411E3E75970018430D /* Project_Ignite_2017UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_Ignite_2017UITests.m; sourceTree = "<group>"; };
 		33320C431E3E75970018430D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33B2DA0A1E5A1BE100A568F8 /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		33B2DA0B1E5A1C1600A568F8 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				33320C201E3E75970018430D /* AppDelegate.m */,
 				33320C221E3E75970018430D /* ViewController.h */,
 				33320C231E3E75970018430D /* ViewController.m */,
+				33B2DA0A1E5A1BE100A568F8 /* EditViewController.h */,
+				33B2DA0B1E5A1C1600A568F8 /* EditViewController.m */,
 				33320C251E3E75970018430D /* Main.storyboard */,
 				33320C281E3E75970018430D /* Assets.xcassets */,
 				33320C2A1E3E75970018430D /* LaunchScreen.storyboard */,
@@ -276,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33B2DA0C1E5A1C1600A568F8 /* EditViewController.m in Sources */,
 				33320C241E3E75970018430D /* ViewController.m in Sources */,
 				33320C211E3E75970018430D /* AppDelegate.m in Sources */,
 				33320C1E1E3E75970018430D /* main.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "EditViewController.h"
 
 @interface ViewController ()
 
@@ -37,7 +38,6 @@
 - (IBAction)capturePhoto: (UIButton*)sender {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
-        picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         
     [self presentViewController:picker animated:YES completion:NULL];
@@ -46,7 +46,6 @@
 - (IBAction)choosePhoto: (UIButton *)sender {
            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
            picker.delegate = self;
-           picker.allowsEditing = YES;
            picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
            
     [self presentViewController:picker animated:YES completion:NULL];
@@ -55,7 +54,7 @@
 #pragma mark - Image Picker Controller delegate methods
        
 - (void)imagePickerController:(UIImagePickerController *)picker   didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    UIImage *chosenImage = info[UIImagePickerControllerOriginalImage];
     self.ImageView.image = chosenImage;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
@@ -66,7 +65,14 @@
 }
 
 
-
-
+//
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue send:(id)sender
+//{
+//    if ([[segue identifier] isEqualToString:@"filter"])
+//    {
+//        EditViewController *vc = [segue destinationViewController];
+//        [vc setEditorImageView:self.ImageView];
+//    }
+//}
 
 @end
