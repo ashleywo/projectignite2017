@@ -16,11 +16,13 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *filterButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
+@property (weak, nonatomic) IBOutlet UISlider *filterSlider;
 
 - (IBAction)pressedBack:(id)sender;
 - (IBAction)photoFromAlbum;
 - (IBAction)photoFromCamera;
 - (IBAction)applyImageFilter:(id)sender;
 - (IBAction)saveToAlbum:(id)sender;
+- (IBAction)updateFilter:(id)sender;
 
 @end

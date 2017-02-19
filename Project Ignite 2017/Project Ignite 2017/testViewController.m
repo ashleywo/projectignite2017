@@ -30,6 +30,7 @@
         self.cameraButton.enabled = NO;
         [myAlertView show];
     }
+    self.filterSlider.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,7 +62,7 @@
                                                                    delegate:self
                                                           cancelButtonTitle:@"Cancel"
                                                      destructiveButtonTitle:nil
-                                                          otherButtonTitles:@"Grayscale", @"Sepia", @"Sketch", @"Pixelate", @"Color Invert", @"Toon", @"Pinch Distort", @"None", nil];
+                                                          otherButtonTitles:@"Grayscale", @"Sepia", @"Sketch", @"Pixelate", @"Color Invert", @"Toon", @"Pinch Distort", @"Brightness", @"Exposure", @"Contrast", @"Saturation", @"RGB", @"None", nil];
     [filterActionSheet showFromBarButtonItem:sender animated:YES];
 }
 
@@ -87,6 +88,10 @@
     }
 }
 
+- (IBAction)updateFilter:(id)sender {
+    
+}
+
 
 #pragma Image Picker Controller Delegate
 
@@ -109,27 +114,78 @@
     switch (buttonIndex) {
         case 0:
             selectedFilter = [[GPUImageGrayscaleFilter alloc] init];
+            self.filterSlider.hidden = YES;
             break;
         case 1:
             selectedFilter = [[GPUImageSepiaFilter alloc] init];
+            self.filterSlider.hidden = YES;
             break;
         case 2:
             selectedFilter = [[GPUImageSketchFilter alloc] init];
+            self.filterSlider.hidden = YES;
             break;
         case 3:
             selectedFilter = [[GPUImagePixellateFilter alloc] init];
+            self.filterSlider.hidden = YES;
             break;
         case 4:
             selectedFilter = [[GPUImageColorInvertFilter alloc] init];
+            self.filterSlider.hidden = YES;
             break;
         case 5:
             selectedFilter = [[GPUImageToonFilter alloc] init];
+            self.filterSlider.hidden = YES;
             break;
         case 6:
             selectedFilter = [[GPUImagePinchDistortionFilter alloc] init];
+            self.filterSlider.hidden = NO;
+            
+            [self.filterSlider setMinimumValue:-2.0];
+            [self.filterSlider setMaximumValue:2.0];
+            [self.filterSlider setValue:0.5];
             break;
         case 7:
             selectedFilter = [[GPUImageFilter alloc] init];
+            break;
+        case 8:
+            selectedFilter = [[GPUImageBrightnessFilter alloc] init];
+            self.filterSlider.hidden = NO;
+            
+            [self.filterSlider setMinimumValue:-1.0];
+            [self.filterSlider setMaximumValue:1.0];
+            [self.filterSlider setValue:0.0];
+            break;
+        case 9:
+            selectedFilter = [[GPUImageExposureFilter alloc] init];
+            self.filterSlider.hidden = NO;
+            
+            [self.filterSlider setMinimumValue:-4.0];
+            [self.filterSlider setMaximumValue:4.0];
+            [self.filterSlider setValue:0.0];
+            break;
+        case 10:
+            selectedFilter = [[GPUImageContrastFilter alloc] init];
+            self.filterSlider.hidden = NO;
+            
+            [self.filterSlider setMinimumValue:0.0];
+            [self.filterSlider setMaximumValue:4.0];
+            [self.filterSlider setValue:1.0];
+            break;
+        case 11:
+            selectedFilter = [[GPUImageSaturationFilter alloc] init];
+            self.filterSlider.hidden = NO;
+            
+            [self.filterSlider setValue:1.0];
+            [self.filterSlider setMinimumValue:0.0];
+            [self.filterSlider setMaximumValue:2.0];
+            break;
+        case 12:
+            selectedFilter = [[GPUImageRGBFilter alloc] init];
+            self.filterSlider.hidden = NO;
+            
+            [self.filterSlider setMinimumValue:0.0];
+            [self.filterSlider setMaximumValue:2.0];
+            [self.filterSlider setValue:1.0];
             break;
         default:
             break;
