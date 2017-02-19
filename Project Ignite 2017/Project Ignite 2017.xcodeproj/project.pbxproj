@@ -15,6 +15,7 @@
 		C08E318D1E3E762F006B1A85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08E318B1E3E762F006B1A85 /* LaunchScreen.storyboard */; };
 		C08E31981E3E762F006B1A85 /* Project_Ignite_2017Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C08E31971E3E762F006B1A85 /* Project_Ignite_2017Tests.m */; };
 		C08E31A31E3E762F006B1A85 /* Project_Ignite_2017UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C08E31A21E3E762F006B1A85 /* Project_Ignite_2017UITests.m */; };
+		C08E31B31E5A1C50006B1A85 /* filterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C08E31B21E5A1C50006B1A85 /* filterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		C08E319E1E3E762F006B1A85 /* Project Ignite 2017UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project Ignite 2017UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08E31A21E3E762F006B1A85 /* Project_Ignite_2017UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_Ignite_2017UITests.m; sourceTree = "<group>"; };
 		C08E31A41E3E762F006B1A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C08E31B11E5A1C08006B1A85 /* filterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = filterViewController.h; sourceTree = "<group>"; };
+		C08E31B21E5A1C50006B1A85 /* filterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = filterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				C08E31811E3E762F006B1A85 /* AppDelegate.m */,
 				C08E31831E3E762F006B1A85 /* ViewController.h */,
 				C08E31841E3E762F006B1A85 /* ViewController.m */,
+				C08E31B11E5A1C08006B1A85 /* filterViewController.h */,
+				C08E31B21E5A1C50006B1A85 /* filterViewController.m */,
 				C08E31861E3E762F006B1A85 /* Main.storyboard */,
 				C08E31891E3E762F006B1A85 /* Assets.xcassets */,
 				C08E318B1E3E762F006B1A85 /* LaunchScreen.storyboard */,
@@ -276,6 +281,7 @@
 			files = (
 				C08E31851E3E762F006B1A85 /* ViewController.m in Sources */,
 				C08E31821E3E762F006B1A85 /* AppDelegate.m in Sources */,
+				C08E31B31E5A1C50006B1A85 /* filterViewController.m in Sources */,
 				C08E317F1E3E762F006B1A85 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
