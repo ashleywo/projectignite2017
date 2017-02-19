@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+{
+    UIImage *originalImage;
+}
 
 @end
 
@@ -20,11 +23,17 @@
     
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
-        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                              message:@"Device has no camera"
+        UIAlertView *myAlertView = [[UIAlertView alloc]initWithTitle:@"Error"
+                                                             message:@"Device has no camera."
                                                              delegate:nil
-                                                    cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles: nil];
+        self.cameraButton.enabled = NO;
         [myAlertView show];
+    }
+    if (self.image == nil)
+    {
+        self.saveButton.enabled = NO;
     }
 }
 
@@ -34,40 +43,60 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (IBAction)capturePhoto:(UIButton *)sender {
+- (IBAction)openCamera
+{
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
-    picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
-- (IBAction)choosePhoto:(UIButton *)sender {
+- (IBAction)openLibrary
+{
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
-    picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
+- (IBAction)savePhoto:(id)sender {
+    if (self.image != nil)
+    {
+        UIImageWriteToSavedPhotosAlbum(self.image, nil, nil, nil);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
+                                                        message:@"Saved to camera roll."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"No picture available."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
+- (IBAction)pressedBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - Image Picker Controller delegate methods
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.cameraImageView.image = chosenImage;
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    self.saveButton.enabled = YES;
+    NSLog(@"hi");
+    originalImage = [info valueForKey:UIImagePickerControllerOriginalImage];
+    
+    [self.selectImageView setImage:originalImage];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-}
-
-
-
-
 
 @end

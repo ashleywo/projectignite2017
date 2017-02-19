@@ -8,13 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
+@property (strong, nonatomic) UIImage * image;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *albumButton;
+@property (weak, nonatomic) IBOutlet UIImageView *selectImageView;
 
-@property (strong, nonatomic) IBOutlet UIImageView *cameraImageView;
+- (IBAction)openCamera;
+- (IBAction)openLibrary;
+- (IBAction)savePhoto:(id)sender;
+- (IBAction)pressedBack:(id)sender;
 
-- (IBAction)capturePhoto:(UIButton *)sender;
-- (IBAction)choosePhoto:(UIButton *)sender;
 
 @end
 
