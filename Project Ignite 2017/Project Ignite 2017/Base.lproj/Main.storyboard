@@ -10,6 +10,53 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Filter View Controller-->
+        <scene sceneID="ZZO-1W-v5E">
+            <objects>
+                <viewController id="FDV-w1-wPq" customClass="filterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GXN-X3-ObJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="444-kp-Chz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1uc-Sx-7u0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxh-rN-Pl3">
+                                <rect key="frame" x="110" y="629" width="154" height="30"/>
+                                <state key="normal" title="Choose another photo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosePhoto:" destination="FDV-w1-wPq" eventType="touchUpInside" id="TJQ-rQ-EFM"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="x1D-nw-ZuM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ib4-9H-Dak">
+                                <rect key="frame" x="0.0" y="28" width="375" height="495"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hxh-rN-Pl3" firstAttribute="top" secondItem="GXN-X3-ObJ" secondAttribute="bottom" constant="609" id="7c0-h1-da4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ib4-9H-Dak" secondAttribute="trailing" constant="-16" id="B6E-qx-pej"/>
+                            <constraint firstItem="hxh-rN-Pl3" firstAttribute="top" secondItem="GXN-X3-ObJ" secondAttribute="bottom" constant="609" id="bmQ-QA-m73"/>
+                            <constraint firstItem="ib4-9H-Dak" firstAttribute="top" secondItem="GXN-X3-ObJ" secondAttribute="bottom" constant="8" id="jE3-RS-acY"/>
+                            <constraint firstItem="444-kp-Chz" firstAttribute="top" secondItem="hxh-rN-Pl3" secondAttribute="bottom" constant="8" id="k5b-76-sUr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hxh-rN-Pl3" secondAttribute="trailing" constant="95" id="mSb-B4-pVp"/>
+                            <constraint firstItem="ib4-9H-Dak" firstAttribute="centerX" secondItem="1uc-Sx-7u0" secondAttribute="centerX" id="vcS-vA-I78"/>
+                            <constraint firstItem="hxh-rN-Pl3" firstAttribute="top" secondItem="ib4-9H-Dak" secondAttribute="bottom" constant="106" id="x1B-1e-tel"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chooseAnotherPhotoButton" destination="hxh-rN-Pl3" id="JcC-fA-mJY"/>
+                        <outlet property="imageView" destination="ib4-9H-Dak" id="7zM-5A-P3n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3CR-L8-ONu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="632.79999999999995" y="138.98050974512745"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -22,7 +69,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V3a-Go-wK4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V3a-Go-wK4">
                                 <rect key="frame" x="0.0" y="28" width="375" height="490"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="7Ud-dI-cZk"/>
@@ -45,16 +92,28 @@
                                     <action selector="choosephoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Xk-LA-J5h"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD6-lP-yCk">
+                                <rect key="frame" x="33" y="71" width="32" height="35"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FDV-w1-wPq" kind="show" id="pXO-jz-d1f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.35196529040984659" green="0.37604593975838241" blue="0.42291803010471207" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rwh-n5-5ZL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="91" id="07f-7I-iWR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hD6-lP-yCk" secondAttribute="bottom" constant="561" id="2lk-eD-81v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ElK-ug-8mn" secondAttribute="trailing" constant="56" id="4p7-KM-C2h"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V3a-Go-wK4" secondAttribute="bottom" constant="149" id="9F1-bB-HoP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ElK-ug-8mn" secondAttribute="bottom" constant="26" id="Dq1-ef-kbB"/>
+                            <constraint firstItem="hD6-lP-yCk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="51" id="DwW-4o-ppN"/>
                             <constraint firstItem="V3a-Go-wK4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E7A-8O-4pX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rwh-n5-5ZL" secondAttribute="trailing" constant="91" id="XlZ-r3-fb3"/>
                             <constraint firstItem="ElK-ug-8mn" firstAttribute="top" secondItem="rwh-n5-5ZL" secondAttribute="bottom" constant="8" id="Yry-bx-aZ2"/>
+                            <constraint firstItem="V3a-Go-wK4" firstAttribute="leading" secondItem="hD6-lP-yCk" secondAttribute="trailing" constant="-65" id="c9O-L7-CQI"/>
                             <constraint firstItem="rwh-n5-5ZL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hJa-NE-BID"/>
                             <constraint firstItem="ElK-ug-8mn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="vtV-bB-TF3"/>
                             <constraint firstItem="ElK-ug-8mn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wi1-Ad-7Pd"/>
