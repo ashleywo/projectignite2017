@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843FBF871E5A2361005615CB /* editViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FBF861E5A2361005615CB /* editViewController.m */; };
 		AB4FCCD51E3D817A009A886A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4FCCD41E3D817A009A886A /* main.m */; };
 		AB4FCCD81E3D817A009A886A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4FCCD71E3D817A009A886A /* AppDelegate.m */; };
 		AB4FCCDB1E3D817A009A886A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4FCCDA1E3D817A009A886A /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		843FBF851E5A234A005615CB /* editViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = editViewController.h; sourceTree = "<group>"; };
+		843FBF861E5A2361005615CB /* editViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editViewController.m; sourceTree = "<group>"; };
 		AB4FCCD01E3D817A009A886A /* projectignite2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectignite2017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4FCCD41E3D817A009A886A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB4FCCD61E3D817A009A886A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 				AB4FCCD91E3D817A009A886A /* ViewController.h */,
 				AB4FCCDA1E3D817A009A886A /* ViewController.m */,
 				AB4FCCDC1E3D817A009A886A /* Main.storyboard */,
+				843FBF851E5A234A005615CB /* editViewController.h */,
+				843FBF861E5A2361005615CB /* editViewController.m */,
 				AB4FCCDF1E3D817A009A886A /* Assets.xcassets */,
 				AB4FCCE11E3D817A009A886A /* LaunchScreen.storyboard */,
 				AB4FCCE41E3D817A009A886A /* Info.plist */,
@@ -276,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843FBF871E5A2361005615CB /* editViewController.m in Sources */,
 				AB4FCCDB1E3D817A009A886A /* ViewController.m in Sources */,
 				AB4FCCD81E3D817A009A886A /* AppDelegate.m in Sources */,
 				AB4FCCD51E3D817A009A886A /* main.m in Sources */,
