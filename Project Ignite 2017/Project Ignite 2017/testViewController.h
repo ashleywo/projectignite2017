@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GPUImage.h"
 
 @interface testViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate>
 
 @property (strong, nonatomic) UIImage *image;
+@property (strong, nonatomic) NSString *filter;
+@property (strong, nonatomic) GPUImageOutput<GPUImageInput> *selectedFilter;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
 @property (weak, nonatomic) IBOutlet UIImageView *selectedImageView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *filterButton;

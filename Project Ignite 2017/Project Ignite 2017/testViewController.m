@@ -7,7 +7,6 @@
 //
 
 #import "testViewController.h"
-#import "GPUImage.h"
 
 @interface testViewController ()
 {
@@ -94,7 +93,43 @@
 }
 
 - (IBAction)updateFilter:(id)sender {
-    
+    if ([self.filter isEqualToString:@"sepia"])
+    {
+        [(GPUImageSepiaFilter *)self.selectedFilter setIntensity:[(UISlider *)sender value]];
+    }
+    else if ([self.filter isEqualToString:@"sketch"])
+    {
+        [(GPUImageSketchFilter *)self.selectedFilter setEdgeStrength:[(UISlider *)sender value]];
+    }
+    else if ([self.filter isEqualToString:@"pixelate"])
+    {
+        [(GPUImagePixellateFilter *)self.selectedFilter setFractionalWidthOfAPixel:[(UISlider *)sender value]];
+    }
+    else if ([self.filter isEqualToString:@"pinchdistortion"])
+    {
+        [(GPUImagePinchDistortionFilter *)self.selectedFilter setScale:[(UISlider *)sender value]];
+    }
+    else if ([self.filter isEqualToString:@"brightness"])
+    {
+        [(GPUImageBrightnessFilter *)self.selectedFilter setBrightness:[(UISlider *)sender value]];
+    }
+    else if ([self.filter isEqualToString:@"exposure"])
+    {
+        [(GPUImageExposureFilter *)self.selectedFilter setExposure:[(UISlider *)sender value]];
+    }
+    else if ([self.filter isEqualToString:@"contrast"])
+    {
+        [(GPUImageContrastFilter *)self.selectedFilter setContrast:[(UISlider *)sender value]];
+    }
+    else if ([self.filter isEqualToString:@"saturation"])
+    {
+        [(GPUImageSaturationFilter *)self.selectedFilter setSaturation:[(UISlider *)sender value]];
+    }
+    else
+    {
+        [(GPUImageRGBFilter *)self.selectedFilter setGreen:[(UISlider *)sender value]];
+    }
+    self.selectedImageView.image = [self.selectedFilter imageByFilteringImage:originalImage];
 }
 
 
@@ -120,6 +155,7 @@
         case 0:
             selectedFilter = [[GPUImageGrayscaleFilter alloc] init];
             self.filterSlider.hidden = YES;
+            self.filter = @"grayscale";
             break;
         case 1:
             selectedFilter = [[GPUImageSepiaFilter alloc] init];
@@ -128,6 +164,7 @@
             [self.filterSlider setValue:1.0];
             [self.filterSlider setMinimumValue:0.0];
             [self.filterSlider setMaximumValue:1.0];
+            self.filter = @"sepia";
             break;
         case 2:
             selectedFilter = [[GPUImageSketchFilter alloc] init];
@@ -136,6 +173,7 @@
             [self.filterSlider setMinimumValue:0.0];
             [self.filterSlider setMaximumValue:1.0];
             [self.filterSlider setValue:0.25];
+            self.filter = @"sketch";
             break;
         case 3:
             selectedFilter = [[GPUImagePixellateFilter alloc] init];
@@ -144,14 +182,17 @@
             [self.filterSlider setValue:0.05];
             [self.filterSlider setMinimumValue:0.0];
             [self.filterSlider setMaximumValue:0.3];
+            self.filter = @"pixelate";
             break;
         case 4:
             selectedFilter = [[GPUImageColorInvertFilter alloc] init];
             self.filterSlider.hidden = YES;
+            self.filter = @"colorinvert";
             break;
         case 5:
             selectedFilter = [[GPUImageToonFilter alloc] init];
             self.filterSlider.hidden = YES;
+            self.filter = @"toon";
             break;
         case 6:
             selectedFilter = [[GPUImagePinchDistortionFilter alloc] init];
@@ -160,54 +201,62 @@
             [self.filterSlider setMinimumValue:-2.0];
             [self.filterSlider setMaximumValue:2.0];
             [self.filterSlider setValue:0.5];
+            self.filter = @"pinchdistortion";
             break;
         case 7:
-            selectedFilter = [[GPUImageFilter alloc] init];
-            break;
-        case 8:
             selectedFilter = [[GPUImageBrightnessFilter alloc] init];
             self.filterSlider.hidden = NO;
             
             [self.filterSlider setMinimumValue:-1.0];
             [self.filterSlider setMaximumValue:1.0];
             [self.filterSlider setValue:0.0];
+            self.filter = @"brightness";
             break;
-        case 9:
+        case 8:
             selectedFilter = [[GPUImageExposureFilter alloc] init];
             self.filterSlider.hidden = NO;
             
             [self.filterSlider setMinimumValue:-4.0];
             [self.filterSlider setMaximumValue:4.0];
             [self.filterSlider setValue:0.0];
+            self.filter = @"exposure";
             break;
-        case 10:
+        case 9:
             selectedFilter = [[GPUImageContrastFilter alloc] init];
             self.filterSlider.hidden = NO;
             
             [self.filterSlider setMinimumValue:0.0];
             [self.filterSlider setMaximumValue:4.0];
             [self.filterSlider setValue:1.0];
+            self.filter = @"contrast";
             break;
-        case 11:
+        case 10:
             selectedFilter = [[GPUImageSaturationFilter alloc] init];
             self.filterSlider.hidden = NO;
             
             [self.filterSlider setValue:1.0];
             [self.filterSlider setMinimumValue:0.0];
             [self.filterSlider setMaximumValue:2.0];
+            self.filter = @"saturation";
             break;
-        case 12:
+        case 11:
             selectedFilter = [[GPUImageRGBFilter alloc] init];
             self.filterSlider.hidden = NO;
             
             [self.filterSlider setMinimumValue:0.0];
             [self.filterSlider setMaximumValue:2.0];
             [self.filterSlider setValue:1.0];
+            self.filter = @"rgb";
+            break;
+        case 12:
+            selectedFilter = [[GPUImageFilter alloc] init];
+            self.filter = @"nofilter";
             break;
         default:
             break;
     }
     
+    self.selectedFilter = selectedFilter;
     UIImage *filteredImage = [selectedFilter imageByFilteringImage:originalImage];
     self.image = filteredImage;
     [self.selectedImageView setImage:filteredImage];
