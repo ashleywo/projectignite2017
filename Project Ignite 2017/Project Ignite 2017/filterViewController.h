@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GPUImage.h"
+@interface filterViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@interface filterViewController : UIViewController <UIImagePickerControllerDelegate>
-
-
+@property (strong,nonatomic) UIImage *image;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageVIewer;

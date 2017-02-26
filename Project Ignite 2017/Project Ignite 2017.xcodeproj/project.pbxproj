@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C02F098F1E6373A4008A795E /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C02F098A1E63731E008A795E /* libGPUImage.a */; };
+		C02F09921E63740B008A795E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02F09911E63740B008A795E /* QuartzCore.framework */; };
+		C02F09941E637415008A795E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02F09931E637415008A795E /* AVFoundation.framework */; };
+		C02F09961E63741D008A795E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02F09951E63741D008A795E /* OpenGLES.framework */; };
+		C02F09981E637427008A795E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02F09971E637427008A795E /* CoreVideo.framework */; };
+		C02F099A1E63742F008A795E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02F09991E63742F008A795E /* CoreMedia.framework */; };
 		C08E317F1E3E762F006B1A85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C08E317E1E3E762F006B1A85 /* main.m */; };
 		C08E31821E3E762F006B1A85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C08E31811E3E762F006B1A85 /* AppDelegate.m */; };
 		C08E31851E3E762F006B1A85 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C08E31841E3E762F006B1A85 /* ViewController.m */; };
@@ -19,6 +25,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C02F09891E63731E008A795E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C02F09831E63731D008A795E /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		C02F098B1E63731E008A795E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C02F09831E63731D008A795E /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCE209E51943F20C002FEED8;
+			remoteInfo = GPUImageFramework;
+		};
+		C02F098D1E637377008A795E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C02F09831E63731D008A795E /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
 		C08E31941E3E762F006B1A85 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C08E31721E3E762F006B1A85 /* Project object */;
@@ -36,6 +63,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C02F09831E63731D008A795E /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = Submodules/GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
+		C02F09911E63740B008A795E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C02F09931E637415008A795E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C02F09951E63741D008A795E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		C02F09971E637427008A795E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		C02F09991E63742F008A795E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		C08E317A1E3E762F006B1A85 /* Project Ignite 2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Ignite 2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08E317E1E3E762F006B1A85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C08E31801E3E762F006B1A85 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +94,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02F099A1E63742F008A795E /* CoreMedia.framework in Frameworks */,
+				C02F09981E637427008A795E /* CoreVideo.framework in Frameworks */,
+				C02F09961E63741D008A795E /* OpenGLES.framework in Frameworks */,
+				C02F09941E637415008A795E /* AVFoundation.framework in Frameworks */,
+				C02F09921E63740B008A795E /* QuartzCore.framework in Frameworks */,
+				C02F098F1E6373A4008A795E /* libGPUImage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,13 +120,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C02F09841E63731D008A795E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C02F098A1E63731E008A795E /* libGPUImage.a */,
+				C02F098C1E63731E008A795E /* GPUImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C02F09901E63740B008A795E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C02F09991E63742F008A795E /* CoreMedia.framework */,
+				C02F09971E637427008A795E /* CoreVideo.framework */,
+				C02F09951E63741D008A795E /* OpenGLES.framework */,
+				C02F09931E637415008A795E /* AVFoundation.framework */,
+				C02F09911E63740B008A795E /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C08E31711E3E762F006B1A85 = {
 			isa = PBXGroup;
 			children = (
+				C02F09831E63731D008A795E /* GPUImage.xcodeproj */,
 				C08E317C1E3E762F006B1A85 /* Project Ignite 2017 */,
 				C08E31961E3E762F006B1A85 /* Project Ignite 2017Tests */,
 				C08E31A11E3E762F006B1A85 /* Project Ignite 2017UITests */,
 				C08E317B1E3E762F006B1A85 /* Products */,
+				C02F09901E63740B008A795E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +221,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C02F098E1E637377008A795E /* PBXTargetDependency */,
 			);
 			name = "Project Ignite 2017";
 			productName = "Project Ignite 2017";
@@ -238,6 +301,12 @@
 			mainGroup = C08E31711E3E762F006B1A85;
 			productRefGroup = C08E317B1E3E762F006B1A85 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C02F09841E63731D008A795E /* Products */;
+					ProjectRef = C02F09831E63731D008A795E /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C08E31791E3E762F006B1A85 /* Project Ignite 2017 */,
@@ -246,6 +315,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C02F098A1E63731E008A795E /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = C02F09891E63731E008A795E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C02F098C1E63731E008A795E /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = C02F098B1E63731E008A795E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C08E31781E3E762F006B1A85 /* Resources */ = {
@@ -305,6 +391,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C02F098E1E637377008A795E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage;
+			targetProxy = C02F098D1E637377008A795E /* PBXContainerItemProxy */;
+		};
 		C08E31951E3E762F006B1A85 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C08E31791E3E762F006B1A85 /* Project Ignite 2017 */;
@@ -430,6 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TGL8W5L9SM;
+				HEADER_SEARCH_PATHS = "Submodules/GPUIMage/framework/**";
 				INFOPLIST_FILE = "Project Ignite 2017/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignitebthomas.Project-Ignite-2017";
@@ -442,6 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TGL8W5L9SM;
+				HEADER_SEARCH_PATHS = "Submodules/GPUIMage/framework/**";
 				INFOPLIST_FILE = "Project Ignite 2017/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.projectignitebthomas.Project-Ignite-2017";

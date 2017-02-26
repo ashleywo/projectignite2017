@@ -69,7 +69,8 @@
                                     <color key="titleColor" red="0.28945905529999999" green="1" blue="0.50307388659999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="64e-Tf-OFT" kind="show" id="MB8-HH-ITx"/>
+                                    <action selector="editbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHQ-hK-Uba"/>
+                                    <segue destination="McK-Tg-lZS" kind="show" identifier="filterSegue" id="MB8-HH-ITx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,15 +108,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FqH-BE-Yaj">
-                                <rect key="frame" x="0.0" y="37" width="375" height="375"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FqH-BE-Yaj">
+                                <rect key="frame" x="0.0" y="108" width="375" height="375"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="508" id="33n-D5-qEp"/>
+                                    <constraint firstAttribute="height" constant="375" id="33n-D5-qEp"/>
                                     <constraint firstAttribute="width" constant="375" id="snW-vo-zjO"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWU-kp-COG">
-                                <rect key="frame" x="16" y="0.0" width="95" height="30"/>
+                                <rect key="frame" x="16" y="70" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="back">
@@ -129,10 +130,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.2517058693" green="0.25777159690000001" blue="0.25725395220000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="FqH-BE-Yaj" firstAttribute="top" secondItem="Rgi-2G-WWx" secondAttribute="bottom" constant="29" id="1sp-qO-maU"/>
+                            <constraint firstItem="FqH-BE-Yaj" firstAttribute="top" secondItem="Rgi-2G-WWx" secondAttribute="bottom" constant="88" id="1sp-qO-maU"/>
                             <constraint firstItem="FqH-BE-Yaj" firstAttribute="leading" secondItem="g1j-eo-34V" secondAttribute="leading" id="8JW-BT-qY5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="urn-1T-h6R"/>
                     <connections>
                         <outlet property="backButton" destination="aWU-kp-COG" id="Sjl-Bk-dQl"/>
                         <outlet property="imageVIewer" destination="FqH-BE-Yaj" id="2Hx-w0-UJT"/>
@@ -140,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nmA-A7-zKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="720.79999999999995" y="208.24587706146929"/>
+            <point key="canvasLocation" x="1660" y="208.24587706146929"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Pj9-qP-IG7">
@@ -181,6 +183,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcS-3K-KCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-906" y="177"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mLt-Q3-1QI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="McK-Tg-lZS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sfe-cb-HhN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="64e-Tf-OFT" kind="relationship" relationship="rootViewController" id="yFm-8b-tym"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OfS-ng-s40" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720.79999999999995" y="208.24587706146929"/>
         </scene>
     </scenes>
     <resources>

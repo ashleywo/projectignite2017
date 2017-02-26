@@ -10,13 +10,15 @@
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-
+@property (strong,nonatomic) UIImage *image;
 @property (strong, nonatomic) IBOutlet UIImageView *ImageView;
 
 
 - (IBAction)buttoncam:(UIButton *)sender;
 
 - (IBAction)photolibrary:(UIButton *)sender;
+
+- (IBAction)editbutton:(id)sender;
 
 @end
 
