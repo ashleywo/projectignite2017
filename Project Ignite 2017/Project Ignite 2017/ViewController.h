@@ -12,9 +12,11 @@
 
 
 @property (strong, nonatomic) IBOutlet UIImageView *ImageView;
+@property (strong, nonatomic) UIImage *Image;
 
 - (IBAction)capturePhoto:(UIButton *)sender;
 - (IBAction)choosePhoto:(UIButton *)sender;
+- (IBAction)pressedEdit:(id)sender;
 
 @end
 

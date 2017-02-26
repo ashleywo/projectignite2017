@@ -50,12 +50,16 @@
            
     [self presentViewController:picker animated:YES completion:NULL];
 }
+
+- (IBAction)pressedEdit:(id)sender { [self performSegueWithIdentifier:@"editorSegue" sender:self];
+}
        
 #pragma mark - Image Picker Controller delegate methods
        
 - (void)imagePickerController:(UIImagePickerController *)picker   didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *chosenImage = info[UIImagePickerControllerOriginalImage];
     self.ImageView.image = chosenImage;
+    self.Image = chosenImage;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
@@ -64,15 +68,19 @@
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
+#pragma mark - Segue delegate methods
 
-//
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue send:(id)sender
-//{
-//    if ([[segue identifier] isEqualToString:@"filter"])
-//    {
-//        EditViewController *vc = [segue destinationViewController];
-//        [vc setEditorImageView:self.ImageView];
-//    }
-//}
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
 
+    if  ([[segue identifier] isEqualToString:@"editorSegue"])
+    {
+        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        EditViewController *vc = (EditViewController *)navController.topViewController;
+        [vc setImage:self.Image];
+    }
+}
+    
+    
+    
 @end

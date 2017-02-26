@@ -13,6 +13,7 @@
 @implementation EditViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.EditorImageView.image = self.Image;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

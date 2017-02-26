@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GPUImage.h"
 
-@interface EditViewController : UIViewController <UIImagePickerControllerDelegate>
+@interface EditViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UISlider *BrightnessSlide;
 @property (weak, nonatomic) IBOutlet UISlider *ContrastSlide;
 @property (weak, nonatomic) IBOutlet UIImageView *EditorImageView;
-
+@property (strong, nonatomic) UIImage *Image;
 - (IBAction)BrightnessSlide:(id)sender;
 
 - (IBAction)ContrastSlide:(id)sender;
