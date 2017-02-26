@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-   
+    self.UIImageView.image = self.image;
 }
 
 - (void)didReceiveMemoryWarming {

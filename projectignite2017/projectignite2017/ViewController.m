@@ -34,12 +34,6 @@
     
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    
-    [super viewDidAppear:animated];
-    
-}
-
 - (IBAction)capturePhoto:(UIButton *)sender {
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -61,12 +55,18 @@
     
 }
 
+- (IBAction)editPicture:(id)sender {
+    [self performSegueWithIdentifier:@"filterSegue" sender:self];
+}
+
 #pragma mark - Image Picker Controller delegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerOriginalImage];
     self.cameraImageView.image = chosenImage;
+    self.image =chosenImage;
+    
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
@@ -76,15 +76,17 @@
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
+#pragma mark - Segue delegate methods
 }
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([[segue identifier] isEqualToString:@"filter"])
-//    {
-//        editViewController *vc = [segue destinationViewController];
-//        [vc setUIImageView:self.cameraImageView];
-//    }
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id) sender
+{
+    if ([[segue identifier] isEqualToString:@"filterSegue"])
+    {
+        UINavigationController *navController = (UINavigationController *) segue.destinationViewController;
+        editViewController *vc = (editViewController *) navController. topViewController;
+        [vc setImage:self.image];
+    }
+}
 
 @end
 
