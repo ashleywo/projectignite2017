@@ -234,18 +234,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-pe-nkV">
-                                <rect key="frame" x="69" y="606" width="239" height="19"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
-                                <state key="normal" title="Select From Library">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ChoosePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCJ-SE-JwN"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sw1-RW-JdB">
-                                <rect key="frame" x="-19" y="11" width="394" height="535"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sw1-RW-JdB">
+                                <rect key="frame" x="17" y="11" width="342" height="501"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="535" id="c3h-1g-TRz"/>
                                     <constraint firstAttribute="width" constant="394" id="wYH-jB-OV1"/>
@@ -267,7 +257,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hYZ-J8-MmP" kind="show" id="4wV-zq-kle"/>
+                                    <action selector="Filters:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEI-jf-V6P"/>
+                                    <segue destination="VQE-xv-YQF" kind="show" identifier="FilterSegue" id="4wV-zq-kle"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izZ-bU-Wx8">
@@ -301,6 +292,16 @@
                                 </state>
                                 <connections>
                                     <segue destination="Kwa-8P-rfH" kind="show" id="B1l-ez-SMj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-pe-nkV">
+                                <rect key="frame" x="68" y="606" width="239" height="19"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
+                                <state key="normal" title="Select From Library">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ChoosePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCJ-SE-JwN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -343,11 +344,11 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="xR0-4F-kis"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="" id="xR0-4F-kis"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QEB-px-DXH">
-                                <rect key="frame" x="16" y="20" width="343" height="434"/>
+                                <rect key="frame" x="16" y="10" width="343" height="459"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eak-AB-7yS">
@@ -386,6 +387,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.19658365304678854" green="0.0814851318994122" blue="0.33209156263903317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Hwf-Wt-Zfn"/>
                     <connections>
                         <outlet property="Home" destination="Iql-WG-Y8c" id="ckY-qy-HJp"/>
                         <outlet property="ImageView" destination="QEB-px-DXH" id="qgX-KK-Fnl"/>
@@ -393,7 +395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVR-TX-nrR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="722.39999999999998" y="-360.2698650674663"/>
+            <point key="canvasLocation" x="1661.5999999999999" y="-360.2698650674663"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BEF-PY-UKx">
@@ -432,6 +434,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="plW-yf-Ps4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="80.799999999999997" y="-361.16941529235385"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3Ic-aR-UWL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VQE-xv-YQF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tlM-G7-GF3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hYZ-J8-MmP" kind="relationship" relationship="rootViewController" id="Ztn-2t-Qbj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FeD-YF-Ubk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722.39999999999998" y="-360.2698650674663"/>
         </scene>
     </scenes>
     <resources>
