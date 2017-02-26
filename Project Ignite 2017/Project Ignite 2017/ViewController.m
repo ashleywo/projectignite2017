@@ -38,17 +38,17 @@
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    if (originalImage == nil)
-    {
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        
-        [self presentViewController:picker animated:YES completion:NULL];
-    }
-}
+//- (void)viewDidAppear:(BOOL)animated
+//{
+//    if (originalImage == nil)
+//    {
+//        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+//        picker.delegate = self;
+//        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//        
+//        [self presentViewController:picker animated:YES completion:NULL];
+//    }
+//}
 
 
 - (void)didReceiveMemoryWarning {
@@ -115,6 +115,8 @@
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
+
+#pragma mark - Segue delegate methods
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
