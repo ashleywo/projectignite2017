@@ -16,8 +16,10 @@
 @implementation filterViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    if (self.image != nil)
+    {
+        self.photoImageView.image = self.image;
+    }
 }
 
 
@@ -26,6 +28,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)chooseFilter:(id)sender {
+}
+
 - (IBAction)choosePhoto:(id)sender {
 }
+
 @end

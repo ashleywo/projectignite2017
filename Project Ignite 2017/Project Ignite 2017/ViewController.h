@@ -10,10 +10,12 @@
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
+@property (strong, nonatomic) UIImage *image;
 @property (strong, nonatomic) IBOutlet UIImageView *cameraImageView;
 
 - (IBAction)capturephoto:(UIButton *)sender;
 - (IBAction)choosephoto:(UIButton *)sender;
+- (IBAction)clickEdit:(id)sender;
 
 @end
 
