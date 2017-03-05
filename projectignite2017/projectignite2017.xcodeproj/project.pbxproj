@@ -207,7 +207,7 @@
 				TargetAttributes = {
 					AB4FCCCF1E3D817A009A886A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 2HQAX3694V;
+						DevelopmentTeam = HHA3KZ2Y22;
 						ProvisioningStyle = Automatic;
 					};
 					AB4FCCE81E3D817A009A886A = {
@@ -427,11 +427,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2HQAX3694V;
+				DEVELOPMENT_TEAM = HHA3KZ2Y22;
 				INFOPLIST_FILE = projectignite2017/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.projectignite.projectignite2017;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saprojectignite.projectignite2017;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -441,11 +441,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2HQAX3694V;
+				DEVELOPMENT_TEAM = HHA3KZ2Y22;
 				INFOPLIST_FILE = projectignite2017/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.projectignite.projectignite2017;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saprojectignite.projectignite2017;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
