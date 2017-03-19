@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BCF1A33314DDB1EC00852800"
-               BuildableName = "libGPUImage.a"
-               BlueprintName = "GPUImage"
-               ReferencedContainer = "container:GPUImage.xcodeproj">
+               BlueprintIdentifier = "AB4FCCCF1E3D817A009A886A"
+               BuildableName = "projectignite2017.app"
+               BlueprintName = "projectignite2017"
+               ReferencedContainer = "container:projectignite2017.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,13 +32,32 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BCF1A34314DDB1EC00852800"
-               BuildableName = "GPUImageTests.octest"
-               BlueprintName = "GPUImageTests"
-               ReferencedContainer = "container:GPUImage.xcodeproj">
+               BlueprintIdentifier = "AB4FCCE81E3D817A009A886A"
+               BuildableName = "projectignite2017Tests.xctest"
+               BlueprintName = "projectignite2017Tests"
+               ReferencedContainer = "container:projectignite2017.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AB4FCCF31E3D817A009A886A"
+               BuildableName = "projectignite2017UITests.xctest"
+               BlueprintName = "projectignite2017UITests"
+               ReferencedContainer = "container:projectignite2017.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AB4FCCCF1E3D817A009A886A"
+            BuildableName = "projectignite2017.app"
+            BlueprintName = "projectignite2017"
+            ReferencedContainer = "container:projectignite2017.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -52,15 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BCF1A33314DDB1EC00852800"
-            BuildableName = "libGPUImage.a"
-            BlueprintName = "GPUImage"
-            ReferencedContainer = "container:GPUImage.xcodeproj">
+            BlueprintIdentifier = "AB4FCCCF1E3D817A009A886A"
+            BuildableName = "projectignite2017.app"
+            BlueprintName = "projectignite2017"
+            ReferencedContainer = "container:projectignite2017.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AB4FCCCF1E3D817A009A886A"
+            BuildableName = "projectignite2017.app"
+            BlueprintName = "projectignite2017"
+            ReferencedContainer = "container:projectignite2017.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

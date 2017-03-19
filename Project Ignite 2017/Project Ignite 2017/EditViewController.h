@@ -14,6 +14,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *EditorImageView;
 @property (strong, nonatomic) UIImage *Image;
 
-
+- (IBAction)pressedSepia:(id)sender;
+- (IBAction)pressedCustom:(id)sender;
 
 @end
+
+
+

@@ -80,7 +80,7 @@
         [vc setImage:self.Image];
     }
 }
-    
-    
-    
+
+
+
 @end

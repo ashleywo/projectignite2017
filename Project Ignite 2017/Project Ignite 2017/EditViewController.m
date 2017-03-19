@@ -20,6 +20,11 @@
 
 }
 
+- (IBAction)Sepia:(id)sender {
+}
+- (IBAction)Custom:(id)sender {
+}
+
 
 
 @end

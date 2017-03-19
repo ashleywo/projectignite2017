@@ -114,11 +114,39 @@
                                     <constraint firstAttribute="height" constant="375" id="2kb-XM-CFI"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLm-cK-Blp">
+                                <rect key="frame" x="295" y="506" width="64" height="19"/>
+                                <state key="normal" title="CUSTOM">
+                                    <color key="titleColor" red="0.048627756539999997" green="0.13728624580000001" blue="0.99956518409999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Custom:" destination="Yuf-7N-AAc" eventType="touchUpInside" id="8ef-mT-nCS"/>
+                                    <action selector="pressedCustom:" destination="Yuf-7N-AAc" eventType="touchUpInside" id="zj8-co-KSv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrv-KM-lIF">
+                                <rect key="frame" x="16" y="500" width="41" height="30"/>
+                                <state key="normal" title="SEPIA">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Sepia:" destination="Yuf-7N-AAc" eventType="touchUpInside" id="who-iH-jkN"/>
+                                    <action selector="pressedSepia:" destination="Yuf-7N-AAc" eventType="touchUpInside" id="1gy-Gy-LBJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="TLm-cK-Blp" firstAttribute="leading" secondItem="iFV-vP-F2W" secondAttribute="leadingMargin" constant="279" id="01G-jv-eV6"/>
+                            <constraint firstItem="TLm-cK-Blp" firstAttribute="top" secondItem="BFn-Jf-RDj" secondAttribute="bottom" constant="44" id="10w-xz-dhn"/>
+                            <constraint firstItem="yrv-KM-lIF" firstAttribute="top" secondItem="BFn-Jf-RDj" secondAttribute="bottom" constant="38" id="Bu3-Ei-GvK"/>
                             <constraint firstAttribute="trailing" secondItem="BFn-Jf-RDj" secondAttribute="trailing" id="D1i-6f-VqW"/>
                             <constraint firstItem="BFn-Jf-RDj" firstAttribute="top" secondItem="iFV-vP-F2W" secondAttribute="top" constant="87" id="HJa-So-CxB"/>
+                            <constraint firstItem="8QJ-Kx-9Eg" firstAttribute="top" secondItem="TLm-cK-Blp" secondAttribute="bottom" constant="142" id="Noi-wv-NMq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yrv-KM-lIF" secondAttribute="leading" id="PUe-Iq-V2S"/>
+                            <constraint firstItem="TLm-cK-Blp" firstAttribute="leading" secondItem="yrv-KM-lIF" secondAttribute="trailing" constant="238" id="QLP-16-UaO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TLm-cK-Blp" secondAttribute="trailing" id="f5A-rN-bva"/>
+                            <constraint firstItem="8QJ-Kx-9Eg" firstAttribute="top" secondItem="yrv-KM-lIF" secondAttribute="bottom" constant="137" id="mY8-94-0mo"/>
                             <constraint firstItem="BFn-Jf-RDj" firstAttribute="leading" secondItem="iFV-vP-F2W" secondAttribute="leading" id="o0a-0I-KZT"/>
                         </constraints>
                     </view>

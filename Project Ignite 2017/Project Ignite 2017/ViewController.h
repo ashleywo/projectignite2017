@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GPUImage.h"
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -18,5 +19,5 @@
 - (IBAction)choosePhoto:(UIButton *)sender;
 - (IBAction)pressedEdit:(id)sender;
 
-@end
 
+@end
