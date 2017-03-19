@@ -127,6 +127,14 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="gS1-Wy-uDZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3Y-A2-cET">
+                                <rect key="frame" x="16" y="504" width="133" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.28945905529999999" green="1" blue="0.50307388659999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2517058693" green="0.25777159690000001" blue="0.25725395220000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
