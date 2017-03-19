@@ -24,16 +24,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)filter1:(id)sender {
+- (IBAction)filter1:(UIButton *)sender {
+    
 }
 
-- (IBAction)filter2:(id)sender {
-}
-
-- (IBAction)filter3:(id)sender {
-}
-
-- (IBAction)filter4:(id)sender {
-}
 @end

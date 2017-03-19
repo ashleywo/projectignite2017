@@ -134,6 +134,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.28945905529999999" green="1" blue="0.50307388659999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="filter1:" destination="64e-Tf-OFT" eventType="touchUpInside" id="8Mn-VC-gkS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2517058693" green="0.25777159690000001" blue="0.25725395220000002" alpha="1" colorSpace="calibratedRGB"/>

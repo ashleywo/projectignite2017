@@ -16,9 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageVIewer;
 
 - (IBAction)filter1:(id)sender;
-- (IBAction)filter2:(id)sender;
-- (IBAction)filter3:(id)sender;
-- (IBAction)filter4:(id)sender;
 
 @end
 
