@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3304B3A11E7F01B700481ABB /* GPUImage.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 3304B3A01E7F01B700481ABB /* GPUImage.h */; };
 		33BDB8EE1E7EFEF7003D4675 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BDB8ED1E7EFEF7003D4675 /* CoreMedia.framework */; };
 		33BDB8F01E7EFEFD003D4675 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BDB8EF1E7EFEFD003D4675 /* CoreVideo.framework */; };
 		33BDB8F21E7EFF02003D4675 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BDB8F11E7EFF02003D4675 /* OpenGLES.framework */; };
@@ -41,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3304B3A01E7F01B700481ABB /* GPUImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GPUImage.h; path = "../../Downloads/GPUImage-master/framework/Source/GPUImage.h"; sourceTree = "<group>"; };
 		33BDB8ED1E7EFEF7003D4675 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		33BDB8EF1E7EFEFD003D4675 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		33BDB8F11E7EFF02003D4675 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -70,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3304B3A11E7F01B700481ABB /* GPUImage.h in Frameworks */,
 				33BDB8F61E7EFF10003D4675 /* QuartzCore.framework in Frameworks */,
 				33BDB8F41E7EFF08003D4675 /* AVFoundation.framework in Frameworks */,
 				33BDB8F21E7EFF02003D4675 /* OpenGLES.framework in Frameworks */,
@@ -99,7 +96,6 @@
 		33BDB8EC1E7EFEF7003D4675 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3304B3A01E7F01B700481ABB /* GPUImage.h */,
 				33BDB8F51E7EFF10003D4675 /* QuartzCore.framework */,
 				33BDB8F31E7EFF08003D4675 /* AVFoundation.framework */,
 				33BDB8F11E7EFF02003D4675 /* OpenGLES.framework */,
