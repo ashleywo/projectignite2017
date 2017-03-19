@@ -26,6 +26,9 @@
 }
 - (IBAction)filter1:(UIButton *)sender {
     
+    GPUImagePosterizeFilter *filter2 = [[GPUImagePosterizeFilter alloc] init];
+    UIImage *filteredImage = [filter2 imageByFilteringImage:inputImage];
+    
 }
 
 @end
