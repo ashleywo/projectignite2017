@@ -19,9 +19,7 @@
     [super didReceiveMemoryWarning];
 
 }
-- (IBAction)BrightnessSlide:(id)sender {
-}
 
-- (IBAction)ContrastSlide:(id)sender {
-}
+
+
 @end
