@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "GPUImage.h"
 
 @interface AppDelegate ()
 

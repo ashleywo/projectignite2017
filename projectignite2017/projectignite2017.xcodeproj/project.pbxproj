@@ -20,6 +20,7 @@
 		AB4FCCE31E3D817A009A886A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4FCCE11E3D817A009A886A /* LaunchScreen.storyboard */; };
 		AB4FCCEE1E3D817A009A886A /* projectignite2017Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4FCCED1E3D817A009A886A /* projectignite2017Tests.m */; };
 		AB4FCCF91E3D817A009A886A /* projectignite2017UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4FCCF81E3D817A009A886A /* projectignite2017UITests.m */; };
+		AB930B651E80246800CFB3D7 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB930B601E80245400CFB3D7 /* libGPUImage.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = AB4FCCCF1E3D817A009A886A;
 			remoteInfo = projectignite2017;
+		};
+		AB930B5F1E80245400CFB3D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB930B591E80245300CFB3D7 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		AB930B611E80245400CFB3D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB930B591E80245300CFB3D7 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCE209E51943F20C002FEED8;
+			remoteInfo = GPUImageFramework;
+		};
+		AB930B631E80246000CFB3D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB930B591E80245300CFB3D7 /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
+			remoteInfo = GPUImage;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,6 +83,7 @@
 		AB4FCCF41E3D817A009A886A /* projectignite2017UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = projectignite2017UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4FCCF81E3D817A009A886A /* projectignite2017UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = projectignite2017UITests.m; sourceTree = "<group>"; };
 		AB4FCCFA1E3D817A009A886A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB930B591E80245300CFB3D7 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = Submodules/GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB930B651E80246800CFB3D7 /* libGPUImage.a in Frameworks */,
 				33BDB8F61E7EFF10003D4675 /* QuartzCore.framework in Frameworks */,
 				33BDB8F41E7EFF08003D4675 /* AVFoundation.framework in Frameworks */,
 				33BDB8F21E7EFF02003D4675 /* OpenGLES.framework in Frameworks */,
@@ -108,6 +132,7 @@
 		AB4FCCC71E3D817A009A886A = {
 			isa = PBXGroup;
 			children = (
+				AB930B591E80245300CFB3D7 /* GPUImage.xcodeproj */,
 				AB4FCCD21E3D817A009A886A /* projectignite2017 */,
 				AB4FCCEC1E3D817A009A886A /* projectignite2017Tests */,
 				AB4FCCF71E3D817A009A886A /* projectignite2017UITests */,
@@ -168,6 +193,15 @@
 			path = projectignite2017UITests;
 			sourceTree = "<group>";
 		};
+		AB930B5A1E80245300CFB3D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB930B601E80245400CFB3D7 /* libGPUImage.a */,
+				AB930B621E80245400CFB3D7 /* GPUImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,6 +216,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				AB930B641E80246000CFB3D7 /* PBXTargetDependency */,
 			);
 			name = projectignite2017;
 			productName = projectignite2017;
@@ -262,6 +297,12 @@
 			mainGroup = AB4FCCC71E3D817A009A886A;
 			productRefGroup = AB4FCCD11E3D817A009A886A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AB930B5A1E80245300CFB3D7 /* Products */;
+					ProjectRef = AB930B591E80245300CFB3D7 /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AB4FCCCF1E3D817A009A886A /* projectignite2017 */,
@@ -270,6 +311,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AB930B601E80245400CFB3D7 /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = AB930B5F1E80245400CFB3D7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AB930B621E80245400CFB3D7 /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = AB930B611E80245400CFB3D7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AB4FCCCE1E3D817A009A886A /* Resources */ = {
@@ -338,6 +396,11 @@
 			target = AB4FCCCF1E3D817A009A886A /* projectignite2017 */;
 			targetProxy = AB4FCCF51E3D817A009A886A /* PBXContainerItemProxy */;
 		};
+		AB930B641E80246000CFB3D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage;
+			targetProxy = AB930B631E80246000CFB3D7 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -401,6 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Submodules/GPUImage/framework/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -443,6 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Submodules/GPUImage/framework/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
