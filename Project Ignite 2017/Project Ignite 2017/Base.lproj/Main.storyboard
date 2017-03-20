@@ -120,7 +120,6 @@
                                     <color key="titleColor" red="0.048627756539999997" green="0.13728624580000001" blue="0.99956518409999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="Custom:" destination="Yuf-7N-AAc" eventType="touchUpInside" id="8ef-mT-nCS"/>
                                     <action selector="pressedCustom:" destination="Yuf-7N-AAc" eventType="touchUpInside" id="zj8-co-KSv"/>
                                 </connections>
                             </button>
@@ -130,7 +129,6 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="Sepia:" destination="Yuf-7N-AAc" eventType="touchUpInside" id="who-iH-jkN"/>
                                     <action selector="pressedSepia:" destination="Yuf-7N-AAc" eventType="touchUpInside" id="1gy-Gy-LBJ"/>
                                 </connections>
                             </button>

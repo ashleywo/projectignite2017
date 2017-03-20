@@ -275,7 +275,6 @@
 				TargetAttributes = {
 					33320C181E3E75960018430D = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 8LHVWURD22;
 						ProvisioningStyle = Automatic;
 					};
 					33320C311E3E75970018430D = {
@@ -522,7 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8LHVWURD22;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "Submodules/GPUImage/framework/**";
 				INFOPLIST_FILE = "Project Ignite 2017/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -536,7 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8LHVWURD22;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "Submodules/GPUImage/framework/**";
 				INFOPLIST_FILE = "Project Ignite 2017/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;

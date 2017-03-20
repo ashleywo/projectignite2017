@@ -9,22 +9,27 @@
 #import "EditViewController.h"
 
 @interface EditViewController ()
+
 @end
+
 @implementation EditViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.EditorImageView.image = self.Image;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-
 }
 
-- (IBAction)Sepia:(id)sender {
-}
-- (IBAction)Custom:(id)sender {
+- (IBAction)pressedSepia:(id)sender {
+    GPUImageFilter *sepia = [[GPUImageSepiaFilter alloc] init];
+    UIImage *filteredImage = [sepia imageByFilteringImage:self.Image];
+    self.Image = filteredImage;
+    [self.EditorImageView setImage:self.Image];
 }
 
-
+- (IBAction)pressedCustom:(id)sender {
+}
 
 @end
