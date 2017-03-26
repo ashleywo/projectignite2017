@@ -86,12 +86,9 @@
         <!--View Controller-->
         <scene sceneID="g2m-ub-SHU">
             <objects>
-<<<<<<< HEAD
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MD9-no-nx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bmr-SY-2vx" customClass="ViewController" sceneMemberID="viewController">
-=======
                 <viewController id="bmr-SY-2vx" sceneMemberID="viewController">
->>>>>>> 2d5061be855b31054dbbe61843f5d8fd22ab8414
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dZX-kF-g5e"/>
                         <viewControllerLayoutGuide type="bottom" id="Fak-Op-svP"/>
@@ -121,14 +118,11 @@
                                 <rect key="frame" x="16" y="563" width="100" height="50"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-<<<<<<< HEAD
                                 <state key="normal" image="Image-2"/>
                                 <connections>
                                     <action selector="pressedDownload:" destination="bmr-SY-2vx" eventType="touchUpInside" id="WWt-vT-bXg"/>
                                 </connections>
-=======
                                 <state key="normal" image="Download"/>
->>>>>>> 2d5061be855b31054dbbe61843f5d8fd22ab8414
                             </button>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="acP-7u-tRe">
                                 <rect key="frame" x="16" y="20" width="343" height="498"/>
