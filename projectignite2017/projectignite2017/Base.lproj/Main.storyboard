@@ -41,7 +41,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </scrollView>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZHc-CN-17T">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZHc-CN-17T" customClass="CollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -87,7 +87,7 @@
         <scene sceneID="g2m-ub-SHU">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MD9-no-nx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="bmr-SY-2vx" sceneMemberID="viewController">
+                <viewController id="bmr-SY-2vx" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dZX-kF-g5e"/>
                         <viewControllerLayoutGuide type="bottom" id="Fak-Op-svP"/>
@@ -102,16 +102,25 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5s-KA-qaX">
                                 <rect key="frame" x="253" y="563" width="100" height="50"/>
                                 <state key="normal" image="Upload"/>
+                                <connections>
+                                    <action selector="pressedUpload:" destination="bmr-SY-2vx" eventType="touchUpInside" id="cNa-fd-V9l"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBX-Ha-spH">
                                 <rect key="frame" x="162" y="563" width="50" height="50"/>
                                 <state key="normal" image="Edit Image"/>
+                                <connections>
+                                    <action selector="pressedEdit:" destination="bmr-SY-2vx" eventType="touchUpInside" id="eoi-Z0-DhL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ope-qP-QeE">
                                 <rect key="frame" x="16" y="563" width="100" height="50"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" image="Image-2"/>
+                                <connections>
+                                    <action selector="pressedDownload:" destination="bmr-SY-2vx" eventType="touchUpInside" id="WWt-vT-bXg"/>
+                                </connections>
                             </button>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="acP-7u-tRe">
                                 <rect key="frame" x="16" y="20" width="343" height="498"/>
@@ -142,6 +151,12 @@
                             <constraint firstItem="C5s-KA-qaX" firstAttribute="leading" secondItem="mFV-ZJ-ebI" secondAttribute="trailing" constant="-122" id="xbM-Rr-Ka9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraImageView" destination="acP-7u-tRe" id="xtW-NT-9jo"/>
+                        <outlet property="download" destination="ope-qP-QeE" id="Twn-Jp-tHe"/>
+                        <outlet property="edit" destination="fBX-Ha-spH" id="PD3-9c-3MO"/>
+                        <outlet property="upload" destination="C5s-KA-qaX" id="A6q-iS-lRU"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="834" y="27"/>

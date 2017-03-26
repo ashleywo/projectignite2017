@@ -21,18 +21,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        
-        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                              message:@"Device has no camera"
-                                                             delegate:nil
-                                                    cancelButtonTitle:@"OK"
-                                                    otherButtonTitles: nil];
-        
-        [myAlertView show];
-        
-    }
-    
+//    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+//        
+//        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+//                                                              message:@"Device has no camera"
+//                                                             delegate:nil
+//                                                    cancelButtonTitle:@"OK"
+//                                                    otherButtonTitles: nil];
+//        
+//        [myAlertView show];
+//        
+//    }
+//    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -41,45 +41,64 @@
     
 }
 
-- (IBAction)capturePhoto:(UIButton *)sender {
-    
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    
-    [self presentViewController:picker animated:YES completion:NULL];
-    
-}
+//- (IBAction)capturePhoto:(UIButton *)sender {
+//    
+//    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+//    picker.delegate = self;
+//    picker.allowsEditing = YES;
+//    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//    
+//    [self presentViewController:picker animated:YES completion:NULL];
+//    
+//}
 
-- (IBAction)choosePhoto:(UIButton *)sender {
-    
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    [self presentViewController:picker animated:YES completion:NULL];
-    
-    
-}
+//- (IBAction)choosePhoto:(UIButton *)sender {
+//    
+//    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+//    picker.delegate = self;
+//    picker.allowsEditing = YES;
+//    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//    
+//    [self presentViewController:picker animated:YES completion:NULL];
+//    
+//    
+//}
 
 #pragma mark - Image Picker Controller delegate methods
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.cameraImageView.image = chosenImage;
-    
-    [picker dismissViewControllerAnimated:YES completion:NULL];
+//- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+//    
+//    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+//    self.cameraImageView.image = chosenImage;
+//    
+//    [picker dismissViewControllerAnimated:YES completion:NULL];
+//    
+//}
+//
+//- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+//    
+//    [picker dismissViewControllerAnimated:YES completion:NULL];
+//    
+//}
+
+- (IBAction)pressedDownload:(id)sender{
+    if (self.image != nil)
+    {
+        UIImageWriteToSavedPhotosAlbum(self.image, nil, nil, nil);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
+                                                        message:@"Saved to camera roll"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
     
 }
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-    
+- (IBAction)pressedEdit:(id)sender {
 }
 
+- (IBAction)pressedUpload:(id)sender {
+}
 @end
 
