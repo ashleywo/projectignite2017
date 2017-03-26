@@ -158,7 +158,6 @@
                         <outlet property="upload" destination="C5s-KA-qaX" id="A6q-iS-lRU"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MD9-no-nx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="839" y="15"/>
         </scene>
