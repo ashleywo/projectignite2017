@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="Qif-0s-h1f">
             <objects>
-                <viewController id="TbA-KW-KGP" sceneMemberID="viewController">
+                <viewController id="TbA-KW-KGP" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kiu-Rk-jDF"/>
                         <viewControllerLayoutGuide type="bottom" id="23m-io-3eC"/>
@@ -86,7 +86,6 @@
         <!--View Controller-->
         <scene sceneID="g2m-ub-SHU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MD9-no-nx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bmr-SY-2vx" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dZX-kF-g5e"/>
@@ -158,6 +157,7 @@
                         <outlet property="upload" destination="C5s-KA-qaX" id="A6q-iS-lRU"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MD9-no-nx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="839" y="15"/>
         </scene>
