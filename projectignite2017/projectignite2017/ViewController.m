@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <Social/Social.h>
 
 @interface ViewController ()
 
@@ -81,6 +82,14 @@
         [alert show];
     }
     // TO-DO: (ASHLEY ONLY) add Facebook upload functionality
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        
+        [controller setInitialText:@"Check out my new Zoi photo!"];
+        [controller addImage:self.image];
+        [self presentViewController:controller animated:YES completion:nil];
+    }
 }
 
 // Go back to menu

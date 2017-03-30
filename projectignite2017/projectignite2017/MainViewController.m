@@ -140,11 +140,15 @@
         if (self.selectedPhotos.count > 0)
         {
             // Sort indices in ascending order
-            [self.selectedPhotos sortedArrayUsingSelector:@selector(compare:)];
-            // Reverse iterator
+            NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(compare:)];
+            NSArray *photoArray = [NSArray arrayWithArray:self.selectedPhotos];
+            NSArray *sortedArray = [photoArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+            self.selectedPhotos = [NSMutableArray arrayWithArray:sortedArray];
+            NSLog(@"%@", self.selectedPhotos);
             for (NSNumber *indexPath in [self.selectedPhotos reverseObjectEnumerator])
             {
                 NSInteger integerVal = [indexPath integerValue];
+                NSLog(@"%ld", (long)integerVal);
                 // Remove from photo stream
                 [self.images removeObjectAtIndex:integerVal];
             }
