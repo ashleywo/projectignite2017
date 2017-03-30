@@ -148,6 +148,7 @@
                                 <state key="normal" image="Edit Image"/>
                                 <connections>
                                     <action selector="pressedEdit:" destination="bmr-SY-2vx" eventType="touchUpInside" id="eoi-Z0-DhL"/>
+                                    <segue destination="QaJ-2u-Ktg" kind="presentation" identifier="editViewControllerSegue" id="IwN-1b-NCI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ope-qP-QeE">
@@ -207,6 +208,34 @@
             </objects>
             <point key="canvasLocation" x="1776.8" y="14.842578710644679"/>
         </scene>
+        <!--Edit-->
+        <scene sceneID="JT1-5w-VkE">
+            <objects>
+                <viewController id="Gqg-IS-uT4" customClass="editViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JeG-5O-VCy"/>
+                        <viewControllerLayoutGuide type="bottom" id="ra9-K1-cTw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b0Z-9t-bmm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit" id="KLN-xM-NFs">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="VNj-Zh-dVJ">
+                            <connections>
+                                <action selector="pressedBack:" destination="Gqg-IS-uT4" id="YiV-61-N6e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="VNj-Zh-dVJ" id="zvF-ck-nyv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZG-wT-cUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3552.8000000000002" y="10.344827586206897"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qr1-rE-EOc">
             <objects>
@@ -224,6 +253,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2C-vg-VYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="946" y="15"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eLO-xy-seD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QaJ-2u-Ktg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m43-Z3-3ZT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gqg-IS-uT4" kind="relationship" relationship="rootViewController" id="z9i-Sf-oRu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlP-K1-KiZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2613.5999999999999" y="10.344827586206897"/>
         </scene>
     </scenes>
     <resources>

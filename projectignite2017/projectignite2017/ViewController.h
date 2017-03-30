@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "editViewController.h"
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -16,12 +17,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *download;
 @property (weak, nonatomic) IBOutlet UIButton *upload;
 @property (weak, nonatomic) IBOutlet UIButton *edit;
+
 - (IBAction)pressedDownload:(id)sender;
 - (IBAction)pressedEdit:(id)sender;
 - (IBAction)pressedUpload:(id)sender;
 - (IBAction)pressedBack:(id)sender;
-
-//- (IBAction)capturePhoto:  (UIButton *)sender;
-//- (IBAction)choosePhoto:(UIButton *)sender;
 
 @end

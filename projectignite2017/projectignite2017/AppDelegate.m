@@ -17,13 +17,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Load data
     NSData *photos = [[NSUserDefaults standardUserDefaults] objectForKey:@"photos"];
+    // Decode data
     NSArray *photoArray = [NSKeyedUnarchiver unarchiveObjectWithData:photos];
+    // First time, no data present
     if (photoArray == nil)
     {
+        // Create new array for photo stream
         NSArray *imageArray = [[NSArray alloc] init];
+        // Encode array into data
         NSData *images = [NSKeyedArchiver archivedDataWithRootObject:imageArray];
+        // Create dictionary for new app defaults
         NSDictionary *appDefaults = [NSDictionary dictionaryWithObjectsAndKeys:images, @"photos", nil];
+        // Register and synchronize new defaults
         [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }

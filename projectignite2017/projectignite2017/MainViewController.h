@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CollectionViewCell.h"
 
-@interface MainViewController : UIViewController < UICollectionViewDataSource, UICollectionViewDelegate>
+@interface MainViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *images;
 @property (strong, nonatomic) UIImage *image;

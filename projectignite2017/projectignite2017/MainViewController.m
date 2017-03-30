@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Check if device has a working camera
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
         UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
@@ -27,11 +28,15 @@
                                                     otherButtonTitles: nil];
         
         [myAlertView show];
+        // Disable camera button if no camera available
         self.cameraButton.enabled = NO;
     }
     
+    // Grab encoded data if any
     NSData *tempArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"photos"];
+    // Decode data
     NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:tempArray];
+    // If no data, present welcome message
     if (array.count == 0)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome!"
@@ -43,22 +48,32 @@
     }
     else
     {
+        // Otherwise, set self.images to decoded data
         self.images = [NSMutableArray arrayWithArray:array];
     }
+    
+    // Current view controller contains delegate and data source for collection view
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
+    // Install pull-to-refresh controls (probably not needed, but in case)
     self.refreshControl = [[UIRefreshControl alloc] init];
+    // Can change color here
     self.refreshControl.backgroundColor = [UIColor purpleColor];
     self.refreshControl.tintColor = [UIColor whiteColor];
+    // Pull-to-refresh refreshes the photo stream
     [self.refreshControl addTarget:self
                             action:@selector(getPhotos)
                   forControlEvents:UIControlEventValueChanged];
+    // Place refresh control within collection view and not ui view
     [self.collectionView addSubview:self.refreshControl];
+    // In case there are not enough items in the collection view
     self.collectionView.alwaysBounceVertical = YES;
     
+    // Initialize selected photos array for multiple selection
     self.selectedPhotos = [[NSMutableArray alloc] init];
     
+    // Hide cancel button at first load
     self.cancelButton.hidden = YES;
 }
 
@@ -68,51 +83,69 @@
 
 - (void)reloadData
 {
+    // Reload collection view
     [self.collectionView reloadData];
     
+    // Stop refreshing
     if (self.refreshControl)
     {
         [self.refreshControl endRefreshing];
     }
 }
 
+// Refresh photo stream
 - (void)getPhotos
 {
+    // Grab encoded data
     NSData *tempArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"photos"];
+    // Decode data
     NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:tempArray];
     if (array.count != 0)
     {
+        // Set self.images to decoded data
         self.images = [NSMutableArray arrayWithArray:array];
     }
+    // Reload the view
     [self reloadData];
 }
 
+// Take photos with the camera
 - (IBAction)capturePhoto:(id)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     
     [self presentViewController:picker animated:YES completion:NULL];
+    
+    // Note: no editing so there is no cropping
 }
 
+// Choose a photo from library
 - (IBAction)choosePhoto:(id)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     [self presentViewController:picker animated:YES completion:NULL];
+    
+    // Note: no editing so there is no cropping
 }
 
+// Multiple photo selection
 - (IBAction)pressedSelect:(id)sender {
+    // Multiple selection enabled
     if (self.multipleSelectionEnabled)
     {
+        // Multiple selected
         if (self.selectedPhotos.count > 0)
         {
+            // Sort indices in ascending order
             [self.selectedPhotos sortedArrayUsingSelector:@selector(compare:)];
-            NSLog(@"%@", self.selectedPhotos);
+            // Reverse iterator
             for (NSNumber *indexPath in [self.selectedPhotos reverseObjectEnumerator])
             {
                 NSInteger integerVal = [indexPath integerValue];
+                // Remove from photo stream
                 [self.images removeObjectAtIndex:integerVal];
             }
         }
@@ -126,20 +159,25 @@
         // Remove all items from selectedPhotos array
         [self.selectedPhotos removeAllObjects];
         
+        // Disable multiple selection and set button title back to select
         self.multipleSelectionEnabled = NO;
         self.collectionView.allowsMultipleSelection = NO;
         [self.selectButton setTitle:@"SELECT" forState:UIControlStateNormal];
         
+        // If all photos in the stream are removed, disable the select button
         if (self.images.count == 0)
         {
             self.selectButton.enabled = NO;
         }
         
+        // Reload
         [self.collectionView reloadData];
         
+        // Encode the current photo stream array and synchronize defaults
         NSData *encodedArray = [NSKeyedArchiver archivedDataWithRootObject:self.images];
         [[NSUserDefaults standardUserDefaults] setObject:encodedArray forKey:@"photos"];
         
+        // Hide cancel button after finishing
         self.cancelButton.hidden = YES;
     }
     else
@@ -148,13 +186,16 @@
         self.multipleSelectionEnabled = YES;
         self.collectionView.allowsMultipleSelection = YES;
         [self.selectButton setTitle:@"DELETE" forState:UIControlStateNormal];
+        // Allow the cancel option
         self.cancelButton.hidden = NO;
     }
 }
 
+// If the user does not want to delete anything
 - (IBAction)pressedCancel:(id)sender {
     if (self.multipleSelectionEnabled)
     {
+        // Resets button titles and hides itself
         self.multipleSelectionEnabled = NO;
         self.collectionView.allowsMultipleSelection = NO;
         [self.selectButton setTitle:@"SELECT" forState:UIControlStateNormal];
@@ -164,23 +205,28 @@
 
 #pragma mark - Collection View Delegate Methods
 
+// Number of sections (only need 1)
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
 
+// Number of images in photo stream
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.images.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    // Custom collection view cell
     CollectionViewCell *myCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"myCell" forIndexPath:indexPath];
     
     UIImage *image;
     long row = [indexPath row];
     
     image = self.images[row];
+    // Set cell image based on photo stream
     myCell.imageView.image = image;
     self.image = image;
+    // Nothing selected, hide checkmark
     myCell.checkmark.hidden = YES;
     
     return myCell;
@@ -189,6 +235,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (self.multipleSelectionEnabled)
     {
+        // If multiple selection, enable checkmark to show selection and add index to selected photo array
         long row = [indexPath row];
         int number = (int)row;
         NSNumber *index = [NSNumber numberWithInt:number];
@@ -198,6 +245,7 @@
     }
     else
     {
+        // Single selection, send to photo page
         [self performSegueWithIdentifier:@"viewControllerSegue" sender:self];
     }
 }
@@ -206,6 +254,7 @@
 {
     if (self.multipleSelectionEnabled)
     {
+        // Remove checkmark and remove index from selected photo array
         long row = [indexPath row];
         int number = (int)row;
         NSNumber *index = [NSNumber numberWithInt:number];
@@ -221,6 +270,7 @@
 {
     if ([identifier isEqualToString:@"viewControllerSegue"])
     {
+        // Only perform the segue if it is single selection
         if (self.multipleSelectionEnabled)
         {
             return NO;
@@ -232,21 +282,26 @@
     }
     else
     {
+        // Other segues
         return YES;
     }
 }
 
+// Pass data
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"viewControllerSegue"])
     {
+        // If the image is not coming from library or camera
         if (![self.source isEqualToString:@"imagePicker"])
         {
             NSIndexPath *indexPath = [self.collectionView.indexPathsForSelectedItems objectAtIndex:0];
+            // Grab cell image from selection
             CollectionViewCell *cell = (CollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
             self.image = cell.imageView.image;
         }
         UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
         ViewController *vc = (ViewController *)navController.topViewController;
+        // Set next view controller image
         [vc setImage:self.image];
     }
 }
@@ -254,27 +309,37 @@
 #pragma mark - Image Picker Controller delegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
+    // Sending unedited photo (no cropping)
     UIImage *chosenImage = [info valueForKey:UIImagePickerControllerOriginalImage];
+    // Set private variable image
     self.image = chosenImage;
+    // Load data from defaults
     NSData *photoData = [[NSUserDefaults standardUserDefaults] objectForKey:@"photos"];
+    // Decode data
     NSArray *photoArray = [NSKeyedUnarchiver unarchiveObjectWithData:photoData];
     NSMutableArray *photos = [NSMutableArray arrayWithArray:photoArray];
+    // Set photo stream
     self.images = photos;
+    // Add new image
     [photos addObject:self.image];
+    // Decode image and synchronize
     NSData *encodedArray = [NSKeyedArchiver archivedDataWithRootObject:photos];
     [[NSUserDefaults standardUserDefaults] setObject:encodedArray forKey:@"photos"];
     
+    // Set source as camera or library and allow select button to be enabled since there is a photo in the stream
+    // Reload the collection view
     self.source = @"imagePicker";
     self.selectButton.enabled = YES;
     [self.collectionView reloadData];
     
+    // Dismiss the library or camera after selecting image or capture
     [picker dismissViewControllerAnimated:YES completion:NULL];
+    // Send picture to photo page
     [self performSegueWithIdentifier:@"viewControllerSegue" sender:self];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
+    // Press cancel to go back to screen without taking picture or selecting picture
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
