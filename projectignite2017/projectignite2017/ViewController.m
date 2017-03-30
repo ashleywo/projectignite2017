@@ -56,7 +56,7 @@
     [self performSegueWithIdentifier:@"editViewControllerSegue" sender:self];
 }
 
-// Put image into collection view from menu (TO-DO: (ASHLEY ONLY) add Facebook functionality)
+// Put image into collection view from menu and upload to Facebook
 - (IBAction)pressedUpload:(id)sender {
     // Get encoded photo stream array
     NSData *photoData = [[NSUserDefaults standardUserDefaults] objectForKey:@"photos"];
@@ -70,26 +70,44 @@
     // Synchronize defaults
     [[NSUserDefaults standardUserDefaults] setObject:encodedPhotos forKey:@"photos"];
     
-    // Alert the user to successful upload to photo stream
-    if (self.image != nil)
-    {
-        UIImageWriteToSavedPhotosAlbum(self.image, nil, nil, nil);
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
-                                                        message:@"Uploaded to image stream."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil, nil];
-        [alert show];
-    }
-    // TO-DO: (ASHLEY ONLY) add Facebook upload functionality
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
-    {
-        SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        
-        [controller setInitialText:@"Check out my new Zoi photo!"];
-        [controller addImage:self.image];
-        [self presentViewController:controller animated:YES completion:nil];
-    }
+//    // Alert the user to successful upload to photo stream
+//    if (self.image != nil)
+//    {
+//        UIImageWriteToSavedPhotosAlbum(self.image, nil, nil, nil);
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
+//                                                        message:@"Uploaded to image stream."
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles:nil, nil];
+//        [alert show];
+//    }
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Upload"
+                                                                   message:@"Do you want to upload this photo to Facebook?"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *yesButton = [UIAlertAction actionWithTitle:@"Yes"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction *action) {
+                                                          // Facebook functionality
+                                                          if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+                                                          {
+                                                              SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+                                                              
+                                                              [controller setInitialText:@"Check out my new Zoi photo!"];
+                                                              [controller addImage:self.image];
+                                                              [self presentViewController:controller animated:YES completion:nil];
+                                                          }
+                                                      }];
+    
+    UIAlertAction *noButton = [UIAlertAction actionWithTitle:@"No"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction *action) {
+                                                     }];
+    
+    [alert addAction:yesButton];
+    [alert addAction:noButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 // Go back to menu
