@@ -52,17 +52,22 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="103" height="106"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="2ar-bT-tnh">
+                                                    <rect key="frame" x="28" y="30" width="47" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <size key="customSize" width="103" height="102"/>
                                         <connections>
+                                            <outlet property="checkmark" destination="2ar-bT-tnh" id="HPw-hB-8LQ"/>
                                             <outlet property="imageView" destination="Hsh-hZ-bYy" id="MKG-bj-BQN"/>
                                             <segue destination="Dcv-H6-Zax" kind="presentation" identifier="viewControllerSegue" id="P49-za-fHN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oy-q9-d1J">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oy-q9-d1J">
                                 <rect key="frame" x="69" y="506" width="106" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="camera"/>
@@ -70,7 +75,7 @@
                                     <action selector="capturePhoto:" destination="TbA-KW-KGP" eventType="touchUpInside" id="Wts-K0-BXj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZJ-hl-9bL">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZJ-hl-9bL">
                                 <rect key="frame" x="216" y="507" width="104" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Library"/>
@@ -85,13 +90,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07o-FV-msl">
+                                <rect key="frame" x="260" y="20" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SELECT"/>
+                                <connections>
+                                    <action selector="pressedSelect:" destination="TbA-KW-KGP" eventType="touchUpInside" id="as3-eL-vGu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCw-Cu-p7V">
+                                <rect key="frame" x="273" y="47" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CANCEL"/>
+                                <connections>
+                                    <action selector="pressedCancel:" destination="TbA-KW-KGP" eventType="touchUpInside" id="Vbx-5q-Hx1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="3Oy-q9-d1J" id="IiJ-Yo-G9A"/>
+                        <outlet property="cancelButton" destination="WCw-Cu-p7V" id="9GA-0E-Tv9"/>
                         <outlet property="collectionView" destination="stm-7K-gl2" id="BL8-ex-AcT"/>
                         <outlet property="libraryButton" destination="4ZJ-hl-9bL" id="FDu-EI-BRK"/>
+                        <outlet property="selectButton" destination="07o-FV-msl" id="Mwa-38-waA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWp-ME-JZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -113,21 +136,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Marble" translatesAutoresizingMaskIntoConstraints="NO" id="mFV-ZJ-ebI">
                                 <rect key="frame" x="0.0" y="44" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5s-KA-qaX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5s-KA-qaX">
                                 <rect key="frame" x="253" y="607" width="100" height="50"/>
                                 <state key="normal" image="Upload"/>
                                 <connections>
                                     <action selector="pressedUpload:" destination="bmr-SY-2vx" eventType="touchUpInside" id="cNa-fd-V9l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBX-Ha-spH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBX-Ha-spH">
                                 <rect key="frame" x="162" y="607" width="50" height="50"/>
                                 <state key="normal" image="Edit Image"/>
                                 <connections>
                                     <action selector="pressedEdit:" destination="bmr-SY-2vx" eventType="touchUpInside" id="eoi-Z0-DhL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ope-qP-QeE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ope-qP-QeE">
                                 <rect key="frame" x="16" y="607" width="100" height="50"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
@@ -210,5 +233,6 @@
         <image name="Upload" width="50" height="50"/>
         <image name="White Marble" width="1000" height="1504"/>
         <image name="camera" width="52" height="52"/>
+        <image name="checkmark" width="50" height="50"/>
     </resources>
 </document>

@@ -17,6 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Device has no camera."
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles: nil];
+        
+        [myAlertView show];
+        self.cameraButton.enabled = NO;
+    }
+    
     NSData *tempArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"photos"];
     NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:tempArray];
     if (array.count == 0)
@@ -32,7 +45,6 @@
     {
         self.images = [NSMutableArray arrayWithArray:array];
     }
-    NSLog(@"%lu", (unsigned long)self.images.count);
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
@@ -44,6 +56,10 @@
                   forControlEvents:UIControlEventValueChanged];
     [self.collectionView addSubview:self.refreshControl];
     self.collectionView.alwaysBounceVertical = YES;
+    
+    self.selectedPhotos = [[NSMutableArray alloc] init];
+    
+    self.cancelButton.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,6 +103,65 @@
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
+- (IBAction)pressedSelect:(id)sender {
+    if (self.multipleSelectionEnabled)
+    {
+        if (self.selectedPhotos.count > 0)
+        {
+            [self.selectedPhotos sortedArrayUsingSelector:@selector(compare:)];
+            NSLog(@"%@", self.selectedPhotos);
+            for (NSNumber *indexPath in [self.selectedPhotos reverseObjectEnumerator])
+            {
+                NSInteger integerVal = [indexPath integerValue];
+                [self.images removeObjectAtIndex:integerVal];
+            }
+        }
+        
+        // Deselect all selected items
+        for (NSIndexPath *indexPath in self.collectionView.indexPathsForSelectedItems)
+        {
+            [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
+        }
+        
+        // Remove all items from selectedPhotos array
+        [self.selectedPhotos removeAllObjects];
+        
+        self.multipleSelectionEnabled = NO;
+        self.collectionView.allowsMultipleSelection = NO;
+        [self.selectButton setTitle:@"SELECT" forState:UIControlStateNormal];
+        
+        if (self.images.count == 0)
+        {
+            self.selectButton.enabled = NO;
+        }
+        
+        [self.collectionView reloadData];
+        
+        NSData *encodedArray = [NSKeyedArchiver archivedDataWithRootObject:self.images];
+        [[NSUserDefaults standardUserDefaults] setObject:encodedArray forKey:@"photos"];
+        
+        self.cancelButton.hidden = YES;
+    }
+    else
+    {
+        // Change multiple selection to YES and change button to delete
+        self.multipleSelectionEnabled = YES;
+        self.collectionView.allowsMultipleSelection = YES;
+        [self.selectButton setTitle:@"DELETE" forState:UIControlStateNormal];
+        self.cancelButton.hidden = NO;
+    }
+}
+
+- (IBAction)pressedCancel:(id)sender {
+    if (self.multipleSelectionEnabled)
+    {
+        self.multipleSelectionEnabled = NO;
+        self.collectionView.allowsMultipleSelection = NO;
+        [self.selectButton setTitle:@"SELECT" forState:UIControlStateNormal];
+        self.cancelButton.hidden = YES;
+    }
+}
+
 #pragma mark - Collection View Delegate Methods
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -106,15 +181,60 @@
     image = self.images[row];
     myCell.imageView.image = image;
     self.image = image;
+    myCell.checkmark.hidden = YES;
     
     return myCell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"viewControllerSegue" sender:self];
+    if (self.multipleSelectionEnabled)
+    {
+        long row = [indexPath row];
+        int number = (int)row;
+        NSNumber *index = [NSNumber numberWithInt:number];
+        [self.selectedPhotos addObject:index];
+        CollectionViewCell *cell = (CollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        cell.checkmark.hidden = NO;
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"viewControllerSegue" sender:self];
+    }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.multipleSelectionEnabled)
+    {
+        long row = [indexPath row];
+        int number = (int)row;
+        NSNumber *index = [NSNumber numberWithInt:number];
+        [self.selectedPhotos removeObject:index];
+        CollectionViewCell *cell = (CollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        cell.checkmark.hidden = YES;
+    }
 }
 
 #pragma mark - Segue Delegate Methods
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if ([identifier isEqualToString:@"viewControllerSegue"])
+    {
+        if (self.multipleSelectionEnabled)
+        {
+            return NO;
+        }
+        else
+        {
+            return YES;
+        }
+    }
+    else
+    {
+        return YES;
+    }
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"viewControllerSegue"])
@@ -146,6 +266,8 @@
     [[NSUserDefaults standardUserDefaults] setObject:encodedArray forKey:@"photos"];
     
     self.source = @"imagePicker";
+    self.selectButton.enabled = YES;
+    [self.collectionView reloadData];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     [self performSegueWithIdentifier:@"viewControllerSegue" sender:self];
