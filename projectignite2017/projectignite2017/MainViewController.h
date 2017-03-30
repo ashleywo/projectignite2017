@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CollectionViewCell.h"
 
-@interface MainViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface MainViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) NSMutableArray *images;
 @property (strong, nonatomic) UIImage *image;
@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSString *source;
 @property BOOL multipleSelectionEnabled;
 @property (strong, nonatomic) NSMutableArray *selectedPhotos;
+@property (strong, nonatomic) UICollectionViewFlowLayout *flowLayout;
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;
 @property (weak, nonatomic) IBOutlet UIButton *libraryButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;

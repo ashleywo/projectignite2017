@@ -75,6 +75,16 @@
     
     // Hide cancel button at first load
     self.cancelButton.hidden = YES;
+    
+    // Configure layout - remove interitem spacing and line spacing
+    self.flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    self.flowLayout.itemSize = CGSizeMake(self.collectionView.bounds.size.width / 3, self.collectionView.bounds.size.width / 3);
+    self.flowLayout.sectionInset = UIEdgeInsetsMake(20, 0, 10, 0);
+    [self.flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    self.flowLayout.minimumInteritemSpacing = 0;
+    self.flowLayout.minimumLineSpacing = 0;
+    [self.collectionView setCollectionViewLayout:self.flowLayout];
+    self.collectionView.bounces = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -144,11 +154,9 @@
             NSArray *photoArray = [NSArray arrayWithArray:self.selectedPhotos];
             NSArray *sortedArray = [photoArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
             self.selectedPhotos = [NSMutableArray arrayWithArray:sortedArray];
-            NSLog(@"%@", self.selectedPhotos);
             for (NSNumber *indexPath in [self.selectedPhotos reverseObjectEnumerator])
             {
                 NSInteger integerVal = [indexPath integerValue];
-                NSLog(@"%ld", (long)integerVal);
                 // Remove from photo stream
                 [self.images removeObjectAtIndex:integerVal];
             }
@@ -232,6 +240,8 @@
     self.image = image;
     // Nothing selected, hide checkmark
     myCell.checkmark.hidden = YES;
+    myCell.layer.borderColor = [[UIColor blackColor] CGColor];
+    myCell.layer.borderWidth = 0.5;
     
     return myCell;
 }
@@ -239,6 +249,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (self.multipleSelectionEnabled)
     {
+        NSLog(@"hi");
         // If multiple selection, enable checkmark to show selection and add index to selected photo array
         long row = [indexPath row];
         int number = (int)row;
