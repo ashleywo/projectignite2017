@@ -32,7 +32,8 @@
 //        [myAlertView show];
 //        
 //    }
-//    
+//
+    self.cameraImageView.image = self.image;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -64,8 +65,8 @@
 //    
 //}
 
-#pragma mark - Image Picker Controller delegate methods
-
+//#pragma mark - Image Picker Controller delegate methods
+//
 //- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 //    
 //    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
@@ -99,6 +100,16 @@
 }
 
 - (IBAction)pressedUpload:(id)sender {
+    NSData *photoData = [[NSUserDefaults standardUserDefaults] objectForKey:@"photos"];
+    NSArray *photoArray = [NSKeyedUnarchiver unarchiveObjectWithData:photoData];
+    NSMutableArray *photoAddArray = [NSMutableArray arrayWithArray:photoArray];
+    [photoAddArray addObject:self.image];
+    NSData *encodedPhotos = [NSKeyedArchiver archivedDataWithRootObject:photoAddArray];
+    [[NSUserDefaults standardUserDefaults] setObject:encodedPhotos forKey:@"photos"];
+}
+
+- (IBAction)pressedBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
 

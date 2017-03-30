@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) UIImage *image;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
 @property (strong, nonatomic) IBOutlet UIImageView *cameraImageView;
 @property (weak, nonatomic) IBOutlet UIButton *download;
 @property (weak, nonatomic) IBOutlet UIButton *upload;
@@ -18,6 +19,7 @@
 - (IBAction)pressedDownload:(id)sender;
 - (IBAction)pressedEdit:(id)sender;
 - (IBAction)pressedUpload:(id)sender;
+- (IBAction)pressedBack:(id)sender;
 
 //- (IBAction)capturePhoto:  (UIButton *)sender;
 //- (IBAction)choosePhoto:(UIButton *)sender;

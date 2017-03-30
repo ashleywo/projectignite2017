@@ -17,9 +17,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSUserDefaults *standardDefaults = [[NSUserDefaults alloc] init];
-    NSDictionary *appDefaults = [[NSDictionary alloc] init];
-    [standardDefaults registerDefaults:appDefaults];
+    NSData *photos = [[NSUserDefaults standardUserDefaults] objectForKey:@"photos"];
+    NSArray *photoArray = [NSKeyedUnarchiver unarchiveObjectWithData:photos];
+    if (photoArray == nil)
+    {
+        NSArray *imageArray = [[NSArray alloc] init];
+        NSData *images = [NSKeyedArchiver archivedDataWithRootObject:imageArray];
+        NSDictionary *appDefaults = [NSDictionary dictionaryWithObjectsAndKeys:images, @"photos", nil];
+        [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
     return YES;
 }
 

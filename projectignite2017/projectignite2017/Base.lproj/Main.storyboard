@@ -31,7 +31,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sTy-gU-odN">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="103" height="102"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -41,49 +41,64 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </scrollView>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZHc-CN-17T" customClass="CollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="ZHc-CN-17T" customClass="CollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="103" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="103" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hsh-hZ-bYy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="103" height="106"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
-                                        <size key="customSize" width="80" height="80"/>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="o2I-3x-bq7">
-                                        <rect key="frame" x="105" y="0.0" width="80" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                        <size key="customSize" width="80" height="80"/>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DTa-Lp-96l">
-                                        <rect key="frame" x="209" y="0.0" width="80" height="80"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                        <size key="customSize" width="80" height="80"/>
+                                        <size key="customSize" width="103" height="102"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="Hsh-hZ-bYy" id="MKG-bj-BQN"/>
+                                            <segue destination="Dcv-H6-Zax" kind="presentation" identifier="viewControllerSegue" id="P49-za-fHN"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woV-wT-VYE">
-                                <rect key="frame" x="184" y="577" width="151" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oy-q9-d1J">
+                                <rect key="frame" x="69" y="506" width="106" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="camera"/>
+                                <connections>
+                                    <action selector="capturePhoto:" destination="TbA-KW-KGP" eventType="touchUpInside" id="Wts-K0-BXj"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZJ-hl-9bL">
+                                <rect key="frame" x="216" y="507" width="104" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Library"/>
+                                <connections>
+                                    <action selector="choosePhoto:" destination="TbA-KW-KGP" eventType="touchUpInside" id="Zja-RF-ohY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pull to refresh!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMr-aO-g2D">
+                                <rect key="frame" x="123" y="85" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="3Oy-q9-d1J" id="IiJ-Yo-G9A"/>
+                        <outlet property="collectionView" destination="stm-7K-gl2" id="BL8-ex-AcT"/>
+                        <outlet property="libraryButton" destination="4ZJ-hl-9bL" id="FDu-EI-BRK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWp-ME-JZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="125.59999999999999" y="14.842578710644679"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo-->
         <scene sceneID="g2m-ub-SHU">
             <objects>
                 <viewController id="bmr-SY-2vx" customClass="ViewController" sceneMemberID="viewController">
@@ -96,24 +111,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Marble" translatesAutoresizingMaskIntoConstraints="NO" id="mFV-ZJ-ebI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5s-KA-qaX">
-                                <rect key="frame" x="253" y="563" width="100" height="50"/>
+                                <rect key="frame" x="253" y="607" width="100" height="50"/>
                                 <state key="normal" image="Upload"/>
                                 <connections>
                                     <action selector="pressedUpload:" destination="bmr-SY-2vx" eventType="touchUpInside" id="cNa-fd-V9l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBX-Ha-spH">
-                                <rect key="frame" x="162" y="563" width="50" height="50"/>
+                                <rect key="frame" x="162" y="607" width="50" height="50"/>
                                 <state key="normal" image="Edit Image"/>
                                 <connections>
                                     <action selector="pressedEdit:" destination="bmr-SY-2vx" eventType="touchUpInside" id="eoi-Z0-DhL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ope-qP-QeE">
-                                <rect key="frame" x="16" y="563" width="100" height="50"/>
+                                <rect key="frame" x="16" y="607" width="100" height="50"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" image="Download"/>
@@ -121,8 +136,8 @@
                                     <action selector="pressedDownload:" destination="bmr-SY-2vx" eventType="touchUpInside" id="WWt-vT-bXg"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="acP-7u-tRe">
-                                <rect key="frame" x="16" y="20" width="343" height="498"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="acP-7u-tRe">
+                                <rect key="frame" x="16" y="64" width="343" height="498"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="498" id="v7h-sq-NaD"/>
                                 </constraints>
@@ -150,7 +165,15 @@
                             <constraint firstItem="C5s-KA-qaX" firstAttribute="leading" secondItem="mFV-ZJ-ebI" secondAttribute="trailing" constant="-122" id="xbM-Rr-Ka9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Photo" id="sfZ-Zb-BXj">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="U77-wg-QCc">
+                            <connections>
+                                <action selector="pressedBack:" destination="bmr-SY-2vx" id="z2L-6D-LNZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="U77-wg-QCc" id="Zdj-VB-jOH"/>
                         <outlet property="cameraImageView" destination="acP-7u-tRe" id="xtW-NT-9jo"/>
                         <outlet property="download" destination="ope-qP-QeE" id="Twn-Jp-tHe"/>
                         <outlet property="edit" destination="fBX-Ha-spH" id="PD3-9c-3MO"/>
@@ -159,13 +182,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MD9-no-nx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="15"/>
+            <point key="canvasLocation" x="1776.8" y="14.842578710644679"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qr1-rE-EOc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dcv-H6-Zax" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eum-QT-HoX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bmr-SY-2vx" kind="relationship" relationship="rootViewController" id="ZO0-XL-2RM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2C-vg-VYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="15"/>
         </scene>
     </scenes>
     <resources>
         <image name="Download" width="50" height="50"/>
         <image name="Edit Image" width="50" height="50"/>
+        <image name="Library" width="50" height="50"/>
         <image name="Upload" width="50" height="50"/>
         <image name="White Marble" width="1000" height="1504"/>
+        <image name="camera" width="52" height="52"/>
     </resources>
 </document>
