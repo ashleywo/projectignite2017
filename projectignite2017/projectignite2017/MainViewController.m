@@ -212,6 +212,17 @@
         self.collectionView.allowsMultipleSelection = NO;
         [self.selectButton setTitle:@"SELECT" forState:UIControlStateNormal];
         self.cancelButton.hidden = YES;
+        
+        for (NSNumber *indexPath in self.selectedPhotos)
+        {
+            NSUInteger index_int = [indexPath unsignedIntegerValue];
+            NSIndexPath *index = [NSIndexPath indexPathWithIndex:index_int];
+            CollectionViewCell *cell = (CollectionViewCell *)[self.collectionView cellForItemAtIndexPath:index];
+            cell.checkmark.hidden = YES;
+        }
+        
+        [self.selectedPhotos removeAllObjects];
+        [self.collectionView reloadData];
     }
 }
 
@@ -261,6 +272,7 @@
     else
     {
         // Single selection, send to photo page
+        self.source = @"regular selection";
         [self performSegueWithIdentifier:@"viewControllerSegue" sender:self];
     }
 }
@@ -306,18 +318,27 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"viewControllerSegue"])
     {
+        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        ViewController *vc = (ViewController *)navController.topViewController;
+        
         // If the image is not coming from library or camera
-        if (![self.source isEqualToString:@"imagePicker"])
+        if ([self.source isEqualToString:@"regular selection"])
         {
+            NSLog(@"reg");
+            self.image = nil;
             NSIndexPath *indexPath = [self.collectionView.indexPathsForSelectedItems objectAtIndex:0];
             // Grab cell image from selection
             CollectionViewCell *cell = (CollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
             self.image = cell.imageView.image;
+            NSLog(@"%@", self.image);
+            // Set next view controller image
+            [vc setImage:self.image];
         }
-        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
-        ViewController *vc = (ViewController *)navController.topViewController;
-        // Set next view controller image
-        [vc setImage:self.image];
+        else
+        {
+            // Set next view controller image
+            [vc setImage:self.image];
+        }
     }
 }
 

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Project Ignite. All rights reserved.
 //
 
-#import "collectionViewCell.h"
+#import "CollectionViewCell.h"
 
 @interface CollectionViewCell ()
 
