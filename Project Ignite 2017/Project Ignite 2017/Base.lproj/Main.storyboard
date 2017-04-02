@@ -138,6 +138,10 @@
                                     <action selector="filter1:" destination="64e-Tf-OFT" eventType="touchUpInside" id="8Mn-VC-gkS"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hha-YU-gJo">
+                                <rect key="frame" x="33" y="559" width="309" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.2517058693" green="0.25777159690000001" blue="0.25725395220000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -148,6 +152,7 @@
                     <navigationItem key="navigationItem" id="urn-1T-h6R"/>
                     <connections>
                         <outlet property="backButton" destination="aWU-kp-COG" id="Sjl-Bk-dQl"/>
+                        <outlet property="filterSlider" destination="hha-YU-gJo" id="kWw-G1-9o6"/>
                         <outlet property="imageVIewer" destination="FqH-BE-Yaj" id="2Hx-w0-UJT"/>
                     </connections>
                 </viewController>
