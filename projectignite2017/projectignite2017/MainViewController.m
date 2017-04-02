@@ -174,7 +174,8 @@
         // Disable multiple selection and set button title back to select
         self.multipleSelectionEnabled = NO;
         self.collectionView.allowsMultipleSelection = NO;
-        [self.selectButton setTitle:@"SELECT" forState:UIControlStateNormal];
+        //[self.selectButton setTitle:@"SELECT" forState:UIControlStateNormal];
+        [self.selectButton setImage:[UIImage imageNamed:@"Select"] forState:(UIControlStateNormal)];
         
         // If all photos in the stream are removed, disable the select button
         if (self.images.count == 0)
@@ -197,7 +198,8 @@
         // Change multiple selection to YES and change button to delete
         self.multipleSelectionEnabled = YES;
         self.collectionView.allowsMultipleSelection = YES;
-        [self.selectButton setTitle:@"DELETE" forState:UIControlStateNormal];
+        //[self.selectButton setTitle:@"DELETE" forState:UIControlStateNormal];
+        [self.selectButton setImage:[UIImage imageNamed:@"Garbage"] forState:(UIControlStateNormal)];
         // Allow the cancel option
         self.cancelButton.hidden = NO;
     }
