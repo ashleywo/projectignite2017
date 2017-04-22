@@ -20,7 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+    NSLog(@"%@", self.cameraImageView.image);
+    NSLog(@"%@", self.image);
     self.cameraImageView.image = self.image;
+    NSLog(@"%@", self.image);
 }
 
 #pragma mark Actions
@@ -112,6 +115,7 @@
 
 // Go back to menu
 - (IBAction)pressedBack:(id)sender {
+    self.image = nil;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

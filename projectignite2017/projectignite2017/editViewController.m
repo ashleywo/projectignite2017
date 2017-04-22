@@ -30,4 +30,24 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)pressedBrightness:(id)sender {
+}
+
+- (IBAction)pressedCartoon:(id)sender {
+}
+
+- (IBAction)pressedContrast:(id)sender {
+}
+
+- (IBAction)pressedCrop:(id)sender {
+}
+
+- (IBAction)pressedSaturation:(id)sender {
+}
+
+- (IBAction)pressedHue:(id)sender {
+}
+
+- (IBAction)pressedSlider:(id)sender {
+}
 @end

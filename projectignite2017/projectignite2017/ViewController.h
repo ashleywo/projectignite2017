@@ -11,7 +11,7 @@
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (strong, nonatomic) UIImage *image;
+@property (strong, retain) UIImage *image;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
 @property (strong, nonatomic) IBOutlet UIImageView *cameraImageView;
 @property (weak, nonatomic) IBOutlet UIButton *download;
