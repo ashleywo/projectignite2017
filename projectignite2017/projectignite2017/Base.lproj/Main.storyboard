@@ -227,15 +227,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2rC-AE-Nr5">
-                                <rect key="frame" x="29" y="114" width="317" height="338"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="White Marble" translatesAutoresizingMaskIntoConstraints="NO" id="2rC-AE-Nr5">
+                                <rect key="frame" x="0.0" y="-78" width="452" height="928"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Az-4G-RJa">
                                 <rect key="frame" x="27" y="474" width="321" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.6527668833732605" green="0.48739063739776611" blue="0.91487020254135132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.99523633718490601" green="0.99262708425521851" blue="0.99575501680374146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="pressedSlider:" destination="Gqg-IS-uT4" eventType="valueChanged" id="sfs-xt-Rsf"/>
+                                </connections>
                             </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ip-4a-xpu">
+                                <rect key="frame" x="29" y="84" width="317" height="382"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czA-b5-MKO">
+                                <rect key="frame" x="29" y="506" width="43" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Brightness"/>
+                                <connections>
+                                    <action selector="pressedBrightness:" destination="Gqg-IS-uT4" eventType="touchUpInside" id="eeQ-BS-Mwr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1z-0Y-wfn">
+                                <rect key="frame" x="80" y="506" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Contrast"/>
+                                <connections>
+                                    <action selector="pressedContrast:" destination="Gqg-IS-uT4" eventType="touchUpInside" id="mfP-mR-z8p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAz-aZ-jRh">
+                                <rect key="frame" x="192" y="506" width="28" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Hue (Jackman)"/>
+                                <connections>
+                                    <action selector="pressedHue:" destination="Gqg-IS-uT4" eventType="touchUpInside" id="h3s-7a-9m1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0A-Ic-yg9">
+                                <rect key="frame" x="241" y="506" width="39" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Saturation"/>
+                                <connections>
+                                    <action selector="pressedSaturation:" destination="Gqg-IS-uT4" eventType="touchUpInside" id="idY-1H-pDb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvH-Ce-A0t">
+                                <rect key="frame" x="304" y="501" width="42" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Cartoon"/>
+                                <connections>
+                                    <action selector="pressedCartoon:" destination="Gqg-IS-uT4" eventType="touchUpInside" id="9Ka-t9-8Kk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cON-mT-cBp">
+                                <rect key="frame" x="134" y="506" width="34" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Crop"/>
+                                <connections>
+                                    <action selector="pressedCrop:" destination="Gqg-IS-uT4" eventType="touchUpInside" id="Pnz-Zl-V4L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -254,6 +309,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="VNj-Zh-dVJ" id="zvF-ck-nyv"/>
+                        <outlet property="filterslider" destination="8Az-4G-RJa" id="LaB-U7-e8f"/>
+                        <outlet property="imagedisplay" destination="4Ip-4a-xpu" id="jZM-CA-uzk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZG-wT-cUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -299,11 +356,17 @@
     </scenes>
     <resources>
         <image name="Back" width="25" height="25"/>
+        <image name="Brightness" width="50" height="50"/>
         <image name="Cancel" width="35" height="35"/>
+        <image name="Cartoon" width="50" height="50"/>
+        <image name="Contrast" width="50" height="50"/>
+        <image name="Crop" width="50" height="50"/>
         <image name="Download" width="50" height="50"/>
         <image name="Edit Image" width="50" height="50"/>
+        <image name="Hue (Jackman)" width="50" height="50"/>
         <image name="Library" width="50" height="50"/>
         <image name="Refresh" width="35" height="35"/>
+        <image name="Saturation" width="50" height="50"/>
         <image name="Select" width="35" height="35"/>
         <image name="Upload" width="50" height="50"/>
         <image name="White Marble" width="1000" height="1504"/>

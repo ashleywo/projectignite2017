@@ -17,7 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // TO-DO: set the image view to self.image here (i.e. self.photoImageView.image = self.image)
+    self.imagedisplay.image = self.image;
+    self.filterslider.hidden = YES;
+    self.currentImage = self.image;
+    self.nofilterImage = self.image;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,29 +28,31 @@
 }
 
 // TO-DO: write filter functions
+- (IBAction)pressedSlider:(id)sender {
+ 
+}
+- (IBAction)pressedSaturation:(id)sender {
+    
+}
+- (IBAction)pressedContrast:(id)sender {
+    
+}
+- (IBAction)pressedCrop:(id)sender {
+    
+}
+- (IBAction)pressedCartoon:(id)sender {
+    
+}
+- (IBAction)pressedBrightness:(id)sender {
+    
+}
+- (IBAction)pressedHue:(id)sender {
+    
+}
 
 - (IBAction)pressedBack:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)pressedBrightness:(id)sender {
-}
 
-- (IBAction)pressedCartoon:(id)sender {
-}
-
-- (IBAction)pressedContrast:(id)sender {
-}
-
-- (IBAction)pressedCrop:(id)sender {
-}
-
-- (IBAction)pressedSaturation:(id)sender {
-}
-
-- (IBAction)pressedHue:(id)sender {
-}
-
-- (IBAction)pressedSlider:(id)sender {
-}
 @end

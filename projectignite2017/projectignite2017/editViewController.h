@@ -9,19 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "GPUImage.h"
 
-@interface editViewController : UIViewController <UINavigationControllerDelegate>
+@interface editViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (strong, nonatomic) UIImage *image;
-@property (weak, nonatomic) IBOutlet UIButton *Brightness;
+@property (weak, nonatomic) IBOutlet UISlider *filterslider;
+@property (strong, nonatomic) GPUImageOutput<GPUImageInput> *selectedFilter;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
-@property (weak, nonatomic) IBOutlet UIButton *Cartoon;
-@property (weak, nonatomic) IBOutlet UIButton *Contrast;
-@property (weak, nonatomic) IBOutlet UIButton *Crop;
-@property (weak, nonatomic) IBOutlet UIButton *Saturation;
-@property (weak, nonatomic) IBOutlet UIButton *Hue;
-@property (weak, nonatomic) IBOutlet UISlider *Slider;
-@property (weak, nonatomic) IBOutlet UIScrollView *filterScroll;
-
+@property (strong, nonatomic) NSString *filter;
+@property (strong,nonatomic) UIImage *image;
+@property (strong, nonatomic) IBOutlet UIImageView *imagedisplay;
+@property (strong, nonatomic) UIImage *currentImage;
+@property (strong, nonatomic) UIImage *nofilterImage;
 
 - (IBAction)pressedBack:(id)sender;
 // TO-DO: add properties (outlets) and actions appropriately
