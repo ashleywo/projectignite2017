@@ -29,9 +29,34 @@
 
 // TO-DO: write filter functions
 - (IBAction)pressedSlider:(id)sender {
- 
+    if ([self.filter isEqualToString:@"brightness"])
+    {
+        [(GPUImageBrightnessFilter *)self.selectedFilter setBrightness:[(UISlider *)sender value]];
+    } else if ([self.filter isEqualToString:@"saturation"])
+    {
+        [(GPUImageSaturationFilter *)self.selectedFilter setSaturation:[(UISlider *)sender value]];
+    }
+
+    self.imagedisplay.image = [self.selectedFilter imageByFilteringImage:self.image];
+    self.currentImage = self.imagedisplay.image;
+
 }
 - (IBAction)pressedSaturation:(id)sender {
+    self.image = self.currentImage;
+    
+    self.filterslider.hidden = NO;
+    [self.filterslider setValue:0.0];
+    [self.filterslider setMinimumValue:0.0];
+    [self.filterslider setMaximumValue:2.0];
+    
+    self.filter = @"saturation";
+    
+    GPUImageFilter *selectedFilter = [[GPUImageSaturationFilter alloc] init];
+    self.selectedFilter = selectedFilter;
+    UIImage *filteredImage = [selectedFilter imageByFilteringImage:self.image];
+    self.image = filteredImage;
+    [self.imagedisplay setImage:self.image];
+    
     
 }
 - (IBAction)pressedContrast:(id)sender {
@@ -44,6 +69,20 @@
     
 }
 - (IBAction)pressedBrightness:(id)sender {
+    self.image = self.currentImage;
+    
+    self.filterslider.hidden = NO;
+    [self.filterslider setValue:0.0];
+    [self.filterslider setMinimumValue:-1.0];
+    [self.filterslider setMaximumValue:1.0];
+    
+    self.filter = @"brightness";
+    
+    GPUImageFilter *selectedFilter = [[GPUImageBrightnessFilter alloc] init];
+    self.selectedFilter = selectedFilter;
+    UIImage *filteredImage = [selectedFilter imageByFilteringImage:self.image];
+    self.image = filteredImage;
+    [self.imagedisplay setImage:self.image];
     
 }
 - (IBAction)pressedHue:(id)sender {
