@@ -20,6 +20,7 @@
 @property (strong, nonatomic) UIImage *currentImage;
 @property (strong, nonatomic) UIImage *nofilterImage;
 
+- (IBAction)reset:(id)sender;
 - (IBAction)pressedBack:(id)sender;
 // TO-DO: add properties (outlets) and actions appropriately
 - (IBAction)pressedBrightness:(id)sender;

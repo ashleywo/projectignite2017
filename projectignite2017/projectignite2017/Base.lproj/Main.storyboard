@@ -275,12 +275,23 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Az-4G-RJa">
-                                <rect key="frame" x="27" y="609" width="321" height="31"/>
+                                <rect key="frame" x="20" y="589" width="321" height="31"/>
                                 <color key="tintColor" red="0.99523633718490601" green="0.99262708425521851" blue="0.99575501680374146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="pressedSlider:" destination="Gqg-IS-uT4" eventType="valueChanged" id="sfs-xt-Rsf"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cc-66-EJn">
+                                <rect key="frame" x="135" y="622" width="90" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="23"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" red="0.0085692081149999991" green="0.0077671136739999999" blue="0.0085597432289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="Gqg-IS-uT4" eventType="touchUpInside" id="Laf-dY-cGD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
