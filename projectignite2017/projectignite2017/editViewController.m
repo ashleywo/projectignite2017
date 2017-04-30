@@ -21,6 +21,7 @@
     self.filterslider.hidden = YES;
     self.currentImage = self.image;
     self.nofilterImage = self.image;
+    self.cropButton.enabled = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,13 +44,38 @@
     [(GPUImageHueFilter *)self.selectedFilter setHue:[(UISlider *)sender value]];
     } else if ([self.filter isEqualToString:@"crop"])
     {
-        //crop goes here
+//        [(GPUImageCropFilter *)self.selectedFilter setCropRegion:CGRectMake(0.0, 0.0, 1.0, [(UISlider *)sender value])];
     }
 
     self.imagedisplay.image = [self.selectedFilter imageByFilteringImage:self.image];
     self.currentImage = self.imagedisplay.image;
 
 }
+
+- (IBAction)pressedSave:(id)sender {
+    // Save only if there is an image present
+    if (self.image != nil)
+    {
+        UIImageWriteToSavedPhotosAlbum(self.image, nil, nil, nil);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
+                                                        message:@"Saved to camera roll."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"No image."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
+
+}
+
 - (IBAction)pressedSaturation:(id)sender {
     self.image = self.currentImage;
     
@@ -89,18 +115,17 @@
     self.image = self.currentImage;
     
     self.filterslider.hidden = NO;
-    [self.filterslider setValue:0.0];
+    [self.filterslider setValue:1.0];
     [self.filterslider setMinimumValue:0.0];
-    [self.filterslider setMaximumValue:1.0];
+    [self.filterslider setMaximumValue:2.0];
     
     self.filter = @"crop";
     
-    GPUImageFilter *selectedFilter = [[GPUImageCropFilter alloc] init];
+    GPUImageFilter *selectedFilter = [[GPUImageCropFilter alloc] initWithCropRegion:self.imagedisplay.frame];
     self.selectedFilter = selectedFilter;
     UIImage *filteredImage = [selectedFilter imageByFilteringImage:self.image];
     self.image = filteredImage;
     [self.imagedisplay setImage:self.image];
-
     
 }
 - (IBAction)pressedCartoon:(id)sender {

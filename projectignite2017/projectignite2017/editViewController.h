@@ -19,6 +19,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imagedisplay;
 @property (strong, nonatomic) UIImage *currentImage;
 @property (strong, nonatomic) UIImage *nofilterImage;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+@property (weak, nonatomic) IBOutlet UIButton *cropButton;
 
 - (IBAction)reset:(id)sender;
 - (IBAction)pressedBack:(id)sender;
@@ -30,5 +32,6 @@
 - (IBAction)pressedSaturation:(id)sender;
 - (IBAction)pressedHue:(id)sender;
 - (IBAction)pressedSlider:(id)sender;
+- (IBAction)pressedSave:(id)sender;
 
 @end
